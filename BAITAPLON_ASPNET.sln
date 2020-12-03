@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAITAPLON_ASPNET", "BAITAPLON_ASPNET\BAITAPLON_ASPNET.csproj", "{BD4EC90E-E869-4EEF-8F83-9813AE1B8473}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD4EC90E-E869-4EEF-8F83-9813AE1B8473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD4EC90E-E869-4EEF-8F83-9813AE1B8473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD4EC90E-E869-4EEF-8F83-9813AE1B8473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD4EC90E-E869-4EEF-8F83-9813AE1B8473}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0527E134-2EED-43F9-8195-DD836EF28E62}
+	EndGlobalSection
+EndGlobal
