@@ -7,11 +7,12 @@ namespace BAITAPLON_ASPNET.Models
 {
     public class NhaTuyenDung
     {
-        public NhaTuyenDung(int maNhaTuyenDung, string tenNhaTuyenDung, int maTaiKhoan, string logo)
+        public NhaTuyenDung(int maNhaTuyenDung, string tenNhaTuyenDung, int maTaiKhoan, string logo,string gioithieu)
         {
             this.maNhaTuyenDung = maNhaTuyenDung;
             this.tenNhaTuyenDung = tenNhaTuyenDung;
             this.maTaiKhoan = maTaiKhoan;
+            this.gioithieu = gioithieu;
             this.logo = logo;
         }
         public NhaTuyenDung() { }
@@ -19,5 +20,6 @@ namespace BAITAPLON_ASPNET.Models
         public string tenNhaTuyenDung { get; set; }
         public int maTaiKhoan { get; set; }
         public string logo { get; set; }
+        public string gioithieu { get; set; }
     }
 }

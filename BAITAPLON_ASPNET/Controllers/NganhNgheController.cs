@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -12,8 +13,7 @@ namespace BAITAPLON_ASPNET.Controllers
         SqlConnection conn = null;
         public NganhNgheController()
         {
-            string path = @"Data Source=DAICAKIEU\SQLEXPRESS;Initial Catalog=DVVIECLAM;Integrated Security=True";
-            conn = new SqlConnection(path);
+            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DVVIECLAMConnectionString2"].ConnectionString);
         }
         public DataTable getNganhNghe()
         {

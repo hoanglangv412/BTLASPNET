@@ -1,6 +1,7 @@
 ﻿using BAITAPLON_ASPNET.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -12,8 +13,7 @@ namespace BAITAPLON_ASPNET.Controllers
         SqlConnection conn = null;
         public TaiKhoanController()
         {
-            string path = @"Data Source=DAICAKIEU\SQLEXPRESS;Initial Catalog=DVVIECLAM;Integrated Security=True";
-            conn = new SqlConnection(path);
+            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DVVIECLAMConnectionString2"].ConnectionString);
         }
         public TaiKhoan getTaiKhoan(string tenTaiKhoan)
         {

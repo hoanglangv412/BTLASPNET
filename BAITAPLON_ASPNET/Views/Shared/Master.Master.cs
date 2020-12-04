@@ -12,6 +12,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
     public partial class Master : System.Web.UI.MasterPage
     {
         TaiKhoanController tkc = new TaiKhoanController();
+        NhaTuyenDungController ntdc = new NhaTuyenDungController();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["tk"] == null)
@@ -109,6 +110,10 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
             if (txtmatkhaudk.Text == txtxnmatkhau.Text && loaitaikhoan != 3)
             {
                 alert = tkc.addTaiKhoan(tk) + ",mời đăng nhập lại.";
+                if(loaitaikhoan == 1)
+                {
+                    NhaTuyenDung ntd = new NhaTuyenDung();
+                }
             }
             else
             {

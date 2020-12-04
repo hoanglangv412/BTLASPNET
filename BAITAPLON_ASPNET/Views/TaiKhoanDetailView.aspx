@@ -23,7 +23,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <asp:Table runat="server" ID="tbltaikhoan">
+    <asp:Table runat="server" ID="tbltaikhoan">
         <asp:TableRow>
             <asp:TableHeaderCell ColumnSpan="2"><asp:Image ID="imgavatar" runat="server" CssClass="imgavatar1"/></asp:TableHeaderCell>
         </asp:TableRow>

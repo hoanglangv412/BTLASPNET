@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BAITAPLON_ASPNET.Models;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,7 +14,7 @@ namespace BAITAPLON_ASPNET.Controllers
         SqlConnection conn = null;
         public NhaTuyenDungController()
         {
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DVVIECLAMConnectionString"].ConnectionString);
+            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DVVIECLAMConnectionString2"].ConnectionString);
         }
         public DataTable getCongTy()
         {
@@ -24,6 +25,28 @@ namespace BAITAPLON_ASPNET.Controllers
             da.Fill(dt);
             conn.Close();
             return dt;
+        }
+        public string addNhaTuyenDung(NhaTuyenDung ntd)
+        {
+            try
+            {
+                conn.Open();
+                string path = "INSERT INTO NhaTuyenDung VALUES(@mntd,@tntd,@mtk,@gt,@logo)";
+                var cmd = new SqlCommand(path, conn);
+                cmd.Parameters.AddWithValue("mntd", ntd.maNhaTuyenDung);
+                cmd.Parameters.AddWithValue("tntd", ntd.tenNhaTuyenDung);
+                cmd.Parameters.AddWithValue("mtk", ntd.maTaiKhoan);
+                cmd.Parameters.AddWithValue("gt", ntd.gioithieu);
+                cmd.Parameters.AddWithValue("logo", ntd.logo);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return "Thanh cong";
+            }
+            catch (Exception)
+            {
+
+                return "That Bai";
+            }
         }
     }
 }
