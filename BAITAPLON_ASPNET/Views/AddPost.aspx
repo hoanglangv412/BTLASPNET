@@ -1,8 +1,23 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="AddPost.aspx.cs" Inherits="BAITAPLON_ASPNET.Views.AddPost" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+    table{
+            margin: 0 auto;
+            margin-top: 80px;
+        }
+     input,select{
+            width: 100%;
+        }
+     td{
+            border: 1px solid white;
+        }
+                 body{
+                background-color: #363b40;
+            }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <asp:Table ID="tbladdbaidang" runat="server">
+        <asp:Table ID="tbladdbaidang" runat="server" CssClass="table table-striped table-dark" Width="81%">
         <asp:TableRow>
             <asp:TableCell>Mã nhà tuyển dụng: </asp:TableCell>
             <asp:TableCell><asp:Label runat="server" ID="lblmantd" /></asp:TableCell>
@@ -17,7 +32,7 @@
         </asp:TableRow>
         <asp:TableRow>
             <asp:TableCell>Mã ngành nghề: </asp:TableCell>
-            <asp:TableCell><asp:TextBox  runat="server" ID="txtmanganhnghe" /></asp:TableCell>
+            <asp:TableCell><asp:DropDownList runat="server" ID="ddlnganhnghe" /></asp:TableCell>
         </asp:TableRow>
         <asp:TableRow>
             <asp:TableCell>Mô tả: </asp:TableCell>
@@ -40,8 +55,8 @@
             <asp:TableCell><asp:TextBox  runat="server" ID="txtdiachi" /></asp:TableCell>
         </asp:TableRow>
         <asp:TableRow>
-            <asp:TableCell><asp:Button runat="server" ID="btnadd" Text="Thêm" OnClick="btnadd_Click"/></asp:TableCell>
-            <asp:TableCell><asp:Button runat="server" ID="btnback" Text="Hủy" PostBackUrl="~/Views/PostManagement.aspx"/></asp:TableCell>
+            <asp:TableCell><asp:Button runat="server" ID="btnback" Text="Quay về" PostBackUrl="~/Views/PostManagement.aspx" CssClass="btn btn-danger"/></asp:TableCell>
+            <asp:TableCell><asp:Button runat="server" ID="btnadd" Text="Thêm" OnClick="btnadd_Click" CssClass="btn btn-success"/></asp:TableCell>
         </asp:TableRow>
     </asp:Table>
             <asp:Label id="lblalert" runat="server"/>

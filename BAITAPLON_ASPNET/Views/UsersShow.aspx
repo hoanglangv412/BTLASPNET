@@ -6,11 +6,18 @@
         }
         table{
             margin: 0 auto;
+            margin-top: 80px;
         }
+        td{
+            border: 1px solid white;
+        }
+                    body{
+                background-color: #363b40;
+            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <p class="font-weight-bolder"><asp:Label runat="server" ID="txtalert" Text="Loại tài khoản: 0 - Admin, 1 - Nhà Tuyển Dụng, 2 - Người dùng" /></p>
+        <p class="font-weight-bolder"><asp:Label runat="server" ID="txtalert" Text="Loại tài khoản: 0 - Admin, 1 - Nhà Tuyển Dụng, 2 - Người dùng" ForeColor="White"/></p>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="maTaiKhoan" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True" class="table table-striped table-dark" width="81%">
         <Columns>
             <asp:BoundField DataField="maTaiKhoan" HeaderText="Mã tài khoản" InsertVisible="False" ReadOnly="True" SortExpression="maTaiKhoan" />

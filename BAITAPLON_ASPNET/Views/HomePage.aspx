@@ -3,6 +3,7 @@
     <style>
         td{
             width:27%;
+            border: 1px solid white;
         }
         table{
             margin: 0 auto;
@@ -25,6 +26,9 @@
               top: 12%;
               left: 15%;
         }
+        body{
+              background-color: #363b40;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -41,8 +45,8 @@
                       <asp:ListItem>Thái Bình</asp:ListItem>
                   </asp:DropDownList>
                   <asp:DropDownList class="btn btn-secondary dropdown-toggle" ID="ddlnganhnghe" runat="server"  ondatabound="DDLpositionDataBound"/>
-                  <asp:TextBox runat="server" ID="txtsearch" placeholder="Nhập công việc cần tìm" Width="50%" Height="40px"/>&nbsp;&nbsp;
-                  <asp:Button runat="server" ID="btnsearch" text="Tìm" OnClick="btnsearch_Click"/>&nbsp;&nbsp;
+                  <asp:TextBox runat="server" ID="txtsearch" placeholder="Nhập công việc cần tìm" Width="50%" Height="50px"/>&nbsp;&nbsp;
+                  <asp:Button runat="server" ID="btnsearch" text="Tìm" OnClick="btnsearch_Click" CssClass="btn btn-primary"/>&nbsp;&nbsp;
                   </div>
             </div>
    <%-- datalist--%>
@@ -58,6 +62,7 @@
                     </svg>
                     <asp:Label ID="mucLuongLabel" runat="server" Text='<%# Eval("mucLuong") %>'/>
                 </p>
+                <asp:LinkButton runat="server" ID="btnlinkDetails" Text="Chi tiết" PostBackUrl="PostDetail.aspx"/>
             </div>
         </ItemTemplate>
     </asp:DataList>

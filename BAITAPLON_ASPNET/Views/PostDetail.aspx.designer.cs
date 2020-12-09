@@ -11,17 +11,26 @@ namespace BAITAPLON_ASPNET.Views
 {
 
 
-    public partial class AddPost
+    public partial class PostDetail
     {
 
         /// <summary>
-        /// tbladdbaidang control.
+        /// tblDetail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table tbladdbaidang;
+        protected global::System.Web.UI.WebControls.Table tblDetail;
+
+        /// <summary>
+        /// lblmabaidang control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmabaidang;
 
         /// <summary>
         /// lblmantd control.
@@ -33,102 +42,66 @@ namespace BAITAPLON_ASPNET.Views
         protected global::System.Web.UI.WebControls.Label lblmantd;
 
         /// <summary>
-        /// txttieude control.
+        /// lbltieude control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txttieude;
+        protected global::System.Web.UI.WebControls.Label lbltieude;
 
         /// <summary>
-        /// txtvitri control.
+        /// lblvitri control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtvitri;
+        protected global::System.Web.UI.WebControls.Label lblvitri;
 
         /// <summary>
-        /// ddlnganhnghe control.
+        /// lblmann control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlnganhnghe;
+        protected global::System.Web.UI.WebControls.Label lblmann;
 
         /// <summary>
-        /// txtmota control.
+        /// lblslt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtmota;
+        protected global::System.Web.UI.WebControls.Label lblslt;
 
         /// <summary>
-        /// txtsoluongtuyen control.
+        /// lblml control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsoluongtuyen;
+        protected global::System.Web.UI.WebControls.Label lblml;
 
         /// <summary>
-        /// txtmucluong control.
+        /// lblsdt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtmucluong;
+        protected global::System.Web.UI.WebControls.Label lblsdt;
 
         /// <summary>
-        /// txtsodienthoai control.
+        /// lbldiachi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsodienthoai;
-
-        /// <summary>
-        /// txtdiachi control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdiachi;
-
-        /// <summary>
-        /// btnback control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnback;
-
-        /// <summary>
-        /// btnadd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnadd;
-
-        /// <summary>
-        /// lblalert control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblalert;
+        protected global::System.Web.UI.WebControls.Label lbldiachi;
     }
 }

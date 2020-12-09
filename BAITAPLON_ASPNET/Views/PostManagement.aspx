@@ -5,6 +5,16 @@
             margin: 0 auto;
             margin-top: 80px;
         }
+        .divadd{
+            width:81%;
+            margin: 0 auto;
+        }
+        td{
+            border: 1px solid white;
+        }
+                    body{
+                background-color: #363b40;
+            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -21,15 +31,17 @@
             <asp:BoundField DataField="diaChi" HeaderText="Địa chỉ" />
             <asp:TemplateField HeaderText="Xóa">
                 <ItemTemplate>
-                    <asp:Button runat="server" Text="Xóa" ID="btndelete" CommandArgument='<%#Bind("maBaiDang")%>' CommandName="delete" OnCommand="btndelete_Click"/>
+                    <asp:Button runat="server" Text="Xóa" ID="btndelete" CommandArgument='<%#Bind("maBaiDang")%>' CommandName="delete" OnCommand="btndelete_Click" CssClass="btn btn-danger"/>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Sửa">
                 <ItemTemplate>
-                    <asp:Button runat="server" Text="Sửa" ID="btnedit" CommandArgument='<%#Bind("maBaiDang")%>' CommandName="edit" OnCommand="btnedit_Click"/>
+                    <asp:Button runat="server" Text="Sửa" ID="btnedit" CommandArgument='<%#Bind("maBaiDang")%>' CommandName="edit" OnCommand="btnedit_Click" CssClass="btn btn-success"/>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
-    <asp:Button runat="server" Text="Thêm bài đăng" ID="btadd" PostBackUrl="AddPost.aspx"/>
+    <div class="divadd">
+        <asp:Button runat="server" Text="Thêm bài đăng" ID="btadd" PostBackUrl="AddPost.aspx" CssClass="btn btn-success"/>
+    </div>
 </asp:Content>

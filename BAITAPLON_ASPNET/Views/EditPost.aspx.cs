@@ -12,6 +12,7 @@ namespace BAITAPLON_ASPNET.Views
     public partial class EditPost : System.Web.UI.Page
     {
         BaiDangController bdc = new BaiDangController();
+        NganhNgheController nnc = new NganhNgheController();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -21,12 +22,17 @@ namespace BAITAPLON_ASPNET.Views
                 lblmantd.Text = (bd.maNhaTuyenDung).ToString();
                 txttieude.Text = bd.tieuDe;
                 txtvitri.Text = bd.viTriCongViec;
-                txtmanganhnghe.Text = (bd.maNganhNghe).ToString();
+                ddlnganhnghe.SelectedValue = (bd.maNganhNghe).ToString();
                 txtmota.Text = bd.moTa;
                 txtsoluongtuyen.Text = (bd.soLuongTuyen).ToString();
                 txtmucluong.Text = (bd.mucLuong).ToString();
                 txtsodienthoai.Text = bd.soDienThoai;
                 txtdiachi.Text = bd.diaChi;
+                //dropdownlist
+                    ddlnganhnghe.DataSource = nnc.getNganhNghe();
+                    ddlnganhnghe.DataTextField = "TenNganhNghe";
+                    ddlnganhnghe.DataValueField = "maNganhNghe";
+                    ddlnganhnghe.DataBind();
             }
         }
         protected void btnedit_Click(object sender, EventArgs e)
@@ -36,7 +42,7 @@ namespace BAITAPLON_ASPNET.Views
             bdn.maNhaTuyenDung = Convert.ToInt32(lblmantd.Text);
             bdn.tieuDe = txttieude.Text;
             bdn.viTriCongViec = txtvitri.Text;
-            bdn.maNganhNghe = Convert.ToInt32(txtmanganhnghe.Text);
+            bdn.maNganhNghe = Convert.ToInt32(ddlnganhnghe.SelectedValue);
             bdn.moTa = txtmota.Text;
             bdn.soLuongTuyen = Convert.ToInt32(txtsoluongtuyen.Text);
             bdn.mucLuong = Convert.ToInt32(txtmucluong.Text);

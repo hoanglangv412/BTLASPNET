@@ -70,6 +70,7 @@ namespace BAITAPLON_ASPNET.Controllers
                 bd.soDienThoai = (string)rd["soDienThoai"];
                 bd.diaChi = (string)rd["diaChi"];
             }
+            conn.Close();
             return bd;
         }
         public DataTable getthroughDiachiandNganhNghe(string diachi,int maNganhNghe,string vitri)

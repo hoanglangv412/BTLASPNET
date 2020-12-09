@@ -79,6 +79,7 @@
     <Content Include="Views\CongTyShow.aspx" />
     <Content Include="Views\EditPost.aspx" />
     <Content Include="Views\HomePage.aspx" />
+    <Content Include="Views\PostDetail.aspx" />
     <Content Include="Views\PostManagement.aspx" />
     <Content Include="Views\TaiKhoanDetailView.aspx" />
     <Content Include="Views\UsersShow.aspx" />
@@ -124,6 +125,13 @@
     </Compile>
     <Compile Include="Views\HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PostDetail.aspx.cs">
+      <DependentUpon>PostDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PostDetail.aspx.designer.cs">
+      <DependentUpon>PostDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\PostManagement.aspx.cs">
       <DependentUpon>PostManagement.aspx</DependentUpon>

@@ -60,13 +60,13 @@ namespace BAITAPLON_ASPNET.Views
         protected global::System.Web.UI.WebControls.TextBox txtvitri;
 
         /// <summary>
-        /// txtmanganhnghe control.
+        /// ddlnganhnghe control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtmanganhnghe;
+        protected global::System.Web.UI.WebControls.DropDownList ddlnganhnghe;
 
         /// <summary>
         /// txtmota control.
@@ -114,15 +114,6 @@ namespace BAITAPLON_ASPNET.Views
         protected global::System.Web.UI.WebControls.TextBox txtdiachi;
 
         /// <summary>
-        /// btnedit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnedit;
-
-        /// <summary>
         /// btnback control.
         /// </summary>
         /// <remarks>
@@ -130,6 +121,15 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnback;
+
+        /// <summary>
+        /// btnedit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnedit;
 
         /// <summary>
         /// lblalert control.

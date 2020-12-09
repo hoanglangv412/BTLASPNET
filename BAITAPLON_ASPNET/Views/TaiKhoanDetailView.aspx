@@ -6,9 +6,10 @@
             Width: 81%;
             background-color: #454d55;
             color: white;
+            margin-top: 80px;
         }
         td{
-            border: 2px solid black;
+            border: 1px solid white;
             width: 50%;
         }
         .imgavatar1{
@@ -27,6 +28,9 @@
             width: 250px;
             height: 70px;
         }
+                    body{
+                background-color: #363b40;
+            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

@@ -10,7 +10,6 @@
     <title>Hello Nhom 1</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
         <style>
-
             .btnsearchgroup{
                   margin: 0 auto;
                   width: 50%;
@@ -18,6 +17,7 @@
                   padding: 10px;
                   float: right;
             }
+
         </style>
     </asp:ContentPlaceHolder>
         <script type="text/javascript">
