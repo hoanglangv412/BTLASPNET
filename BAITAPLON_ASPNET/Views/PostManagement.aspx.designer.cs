@@ -11,16 +11,25 @@ namespace BAITAPLON_ASPNET.Views
 {
 
 
-    public partial class CongTyShow
+    public partial class PostManagement
     {
 
         /// <summary>
-        /// ddlcongty control.
+        /// grdpost control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList ddlcongty;
+        protected global::System.Web.UI.WebControls.GridView grdpost;
+
+        /// <summary>
+        /// btadd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btadd;
     }
 }

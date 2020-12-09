@@ -90,15 +90,15 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
             string matkhau = txtmatkhaudk.Text;
             string anh = txtanhdk.Text;
             int loaitaikhoan = 3;
-            if (rblloaitaikhoan.Text == "Admin")
+            if (rbadmin.Checked)
             {
                 loaitaikhoan = 0;
             }
-            if (rblloaitaikhoan.Text == "Nhà Tuyển Dụng")
+            if (rbntd.Checked)
             {
                 loaitaikhoan = 1;
             }
-            if (rblloaitaikhoan.Text == "Người dùng")
+            if (rbnd.Checked)
             {
                 loaitaikhoan = 2;
             }
@@ -110,9 +110,16 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
             if (txtmatkhaudk.Text == txtxnmatkhau.Text && loaitaikhoan != 3)
             {
                 alert = tkc.addTaiKhoan(tk) + ",mời đăng nhập lại.";
-                if(loaitaikhoan == 1)
+                if (loaitaikhoan == 1)
                 {
+                    List<TaiKhoan> lsttk = tkc.getTaiKhoan();
+                    TaiKhoan tklast = lsttk.LastOrDefault();
                     NhaTuyenDung ntd = new NhaTuyenDung();
+                    ntd.tenNhaTuyenDung = txttennhatuyendung.Text;
+                    ntd.maTaiKhoan = tklast.maTaiKhoan;
+                    ntd.logo = tklast.anh;
+                    ntd.gioithieu = txtgioithieu.Text;
+                    alert = ntdc.addNhaTuyenDung(ntd);
                 }
             }
             else

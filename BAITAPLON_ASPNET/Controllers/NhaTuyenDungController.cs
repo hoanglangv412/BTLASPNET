@@ -14,7 +14,7 @@ namespace BAITAPLON_ASPNET.Controllers
         SqlConnection conn = null;
         public NhaTuyenDungController()
         {
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DVVIECLAMConnectionString2"].ConnectionString);
+            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DVVIECLAMConnectionString"].ConnectionString);
         }
         public DataTable getCongTy()
         {
@@ -31,9 +31,8 @@ namespace BAITAPLON_ASPNET.Controllers
             try
             {
                 conn.Open();
-                string path = "INSERT INTO NhaTuyenDung VALUES(@mntd,@tntd,@mtk,@gt,@logo)";
+                string path = "INSERT INTO NhaTuyenDung VALUES(@tntd,@mtk,@gt,@logo)";
                 var cmd = new SqlCommand(path, conn);
-                cmd.Parameters.AddWithValue("mntd", ntd.maNhaTuyenDung);
                 cmd.Parameters.AddWithValue("tntd", ntd.tenNhaTuyenDung);
                 cmd.Parameters.AddWithValue("mtk", ntd.maTaiKhoan);
                 cmd.Parameters.AddWithValue("gt", ntd.gioithieu);

@@ -10,6 +10,7 @@
     <title>Hello Nhom 1</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
         <style>
+
             .btnsearchgroup{
                   margin: 0 auto;
                   width: 50%;
@@ -41,7 +42,7 @@
                     <a class="navbar-brand" href="#">Quản lí CV</a>
                   </li>
                   <li class="nav-item active" ID="litindang" runat="server">
-                    <a class="navbar-brand" href="#">Quản lí tin tuyển Dụng</a>
+                    <a class="navbar-brand" href="PostManagement.aspx">Quản lí tin tuyển Dụng</a>
                   </li>
                   <li class="nav-item active" ID="litaikhoan" runat="server">
                     <a class="navbar-brand" href="TaiKhoanDetailView.aspx">Quản lí tài khoản</a>
@@ -50,7 +51,7 @@
                     <a class="navbar-brand" href="CongTyShow.aspx">Công ty</a>
                   </li>
                   <li class="nav-item active" ID="linguoidung" runat="server">
-                    <a class="navbar-brand" href="#">Quản lí người dùng</a>
+                    <a class="navbar-brand" href="UsersShow.aspx">Danh sách người dùng</a>
                   </li>
                 </ul>
               </div>
@@ -67,7 +68,7 @@
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <h5 class="modal-title" id="staticBackdropLabel">Đăng nhập</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
@@ -87,7 +88,7 @@
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <h5 class="modal-title" id="staticBackdropLabel">Đăng kí</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
@@ -98,15 +99,14 @@
                         <p class="text-xl-left">Xác nhận: </p><asp:TextBox ID="txtxnmatkhau" runat="server" TextMode="Password"/><br />
                         <p class="text-xl-left">Ảnh: </p><asp:TextBox ID="txtanhdk" runat="server"/>
                         <p class="text-xl-left">Bạn là: </p>
-                                    <asp:RadioButtonList runat="server" ID="rblloaitaikhoan" BackColor="green">
-                                        <asp:ListItem Value="0">Admin</asp:ListItem>
-                                        <asp:ListItem Value="1">Nhà Tuyển Dụng</asp:ListItem>
-                                        <asp:ListItem Value="2">Người dùng</asp:ListItem>
-                                    </asp:RadioButtonList>
-                          <div>
-                                <p class="text-xl-left">Tên nhà tuyển dụng: </p><asp:TextBox runat="server" ID="txttennhatuyendung" />
-                                <p class="text-xl-left">Giới thiệu: </p><asp:TextBox runat="server" ID="txtgioithieu" />
+                          <asp:RadioButton runat="server" ID="rbadmin" Text="Admin" GroupName="rdbtn"/><br />
+                          <asp:RadioButton runat="server" ID="rbnd" Text="Người dùng" GroupName="rdbtn"/><br />
+                          <asp:RadioButton runat="server" ID="rbntd" Text="Nhà tuyển dụng" GroupName="rdbtn"/><br />
+                          <div ID="nhatuyendungdiv" runat="server" style="margin-left:10px">
+                               <p class="text-xl-left">Tên nhà tuyển dụng:</p><asp:TextBox runat="server" ID="txttennhatuyendung" /><br />
+                               <p class="text-xl-left">Giới thiệu: </p><asp:TextBox runat="server" ID="txtgioithieu" /><br />
                           </div>
+
                       </div>
                       <div class="modal-footer">
                         <asp:Button ID="btnmodalsignin" class="btn btn-primary" runat="server" Text="Đăng kí" OnClick="btnmodalsignin_Click"/>

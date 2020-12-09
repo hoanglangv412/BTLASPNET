@@ -20,7 +20,8 @@ namespace BAITAPLON_ASPNET.Views
             lblmataikhoan.Text = (tk.maTaiKhoan).ToString();
             lblmatkhau.Text = tk.matKhau;
             lbltentaikhoan.Text = tk.tenTaiKhoan;
-
+            iduploadphotos.Visible = false;
+            btnok.Visible = false;
         }
         protected void btnagree_Click(object sender, EventArgs e)
         {
@@ -39,6 +40,28 @@ namespace BAITAPLON_ASPNET.Views
             {
                 lblalert.Text = "Như Cứt";
             }
+        }
+        protected void btnchangephoto_Click(object sender, EventArgs e)
+        {
+            iduploadphotos.Visible = true;
+            btnok.Visible = true;
+            btnchangephoto.Visible = false;
+        }
+        protected void btnok_Click(object sender, EventArgs e)
+        {
+            iduploadphotos.Visible = true;
+            string path = Server.MapPath("~/Photos/");
+            iduploadphotos.PostedFile.SaveAs(path + iduploadphotos.FileName);
+
+            //update
+            TaiKhoan tkn = new TaiKhoan();
+            tkn.maTaiKhoan = tk.maTaiKhoan;
+            tkn.tenTaiKhoan = tk.tenTaiKhoan;
+            tkn.matKhau = tk.matKhau;
+            tkn.anh = iduploadphotos.FileName;
+            lblalert.Text = tkc.editTaiKhoan(tkn);
+            Session["tk"] = tkn;
+            Response.Redirect("TaiKhoanDetailView.aspx");
         }
     }
 }

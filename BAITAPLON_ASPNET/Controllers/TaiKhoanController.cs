@@ -13,7 +13,27 @@ namespace BAITAPLON_ASPNET.Controllers
         SqlConnection conn = null;
         public TaiKhoanController()
         {
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DVVIECLAMConnectionString2"].ConnectionString);
+            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DVVIECLAMConnectionString"].ConnectionString);
+        }
+        public List<TaiKhoan> getTaiKhoan()
+        {
+            conn.Open();
+            string path = "SELECT * FROM TaiKhoan";
+            var cmd = new SqlCommand(path, conn);
+            var rd = cmd.ExecuteReader();
+            TaiKhoan tk = new TaiKhoan();
+            List<TaiKhoan> lsttk = new List<TaiKhoan>();
+            while (rd.Read())
+            {
+                tk.maTaiKhoan = (int)rd["maTaiKhoan"];
+                tk.tenTaiKhoan = (string)rd["tenTaiKhoan"];
+                tk.matKhau = (string)rd["matKhau"];
+                tk.loaiTaiKhoan = (int)rd["loaiTaiKhoan"];
+                tk.anh = (string)rd["anh"];
+                lsttk.Add(tk);
+            }
+            conn.Close();
+            return lsttk;
         }
         public TaiKhoan getTaiKhoan(string tenTaiKhoan)
         {

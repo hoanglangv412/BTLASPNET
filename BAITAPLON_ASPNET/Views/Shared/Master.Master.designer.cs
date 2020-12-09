@@ -177,13 +177,40 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         protected global::System.Web.UI.WebControls.TextBox txtanhdk;
 
         /// <summary>
-        /// rblloaitaikhoan control.
+        /// rbadmin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblloaitaikhoan;
+        protected global::System.Web.UI.WebControls.RadioButton rbadmin;
+
+        /// <summary>
+        /// rbnd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rbnd;
+
+        /// <summary>
+        /// rbntd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rbntd;
+
+        /// <summary>
+        /// nhatuyendungdiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl nhatuyendungdiv;
 
         /// <summary>
         /// txttennhatuyendung control.

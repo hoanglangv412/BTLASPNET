@@ -20,12 +20,26 @@
             width:250px;
             height:200px;
         }
+        .btnchange{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+            height: 70px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Table runat="server" ID="tbltaikhoan">
         <asp:TableRow>
-            <asp:TableHeaderCell ColumnSpan="2"><asp:Image ID="imgavatar" runat="server" CssClass="imgavatar1"/></asp:TableHeaderCell>
+            <asp:TableHeaderCell ColumnSpan="2">
+                <asp:Image ID="imgavatar" runat="server" CssClass="imgavatar1"/>
+                <div class="btnchange">
+                    <asp:FileUpload runat="server" ID="iduploadphotos" />
+                    <asp:Button ID="btnchangephoto" runat="server" Text="Change" OnClick="btnchangephoto_Click" CssClass="btn btn-primary"/>
+                    <asp:Button ID="btnok" runat="server" Text="OK" OnClick="btnok_Click" CssClass="btn btn-primary"/>
+                </div>
+            </asp:TableHeaderCell>
         </asp:TableRow>
         <asp:TableRow>
             <asp:TableCell><h5>Mã tài khoản: </h5></asp:TableCell>

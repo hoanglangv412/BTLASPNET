@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace BTL_ASPNET_WEBGTVL.Models
+namespace BAITAPLON_ASPNET.Models
 {
     public class BaiDang
     {

@@ -33,7 +33,7 @@
                   <div class="searchcontent">
                       <asp:DropDownList class="btn btn-secondary dropdown-toggle" ID="ddldiachi" runat="server">
                       <asp:ListItem>Tất cả</asp:ListItem>
-                      <asp:ListItem Value="Cần Thơ">Cần Thơ</asp:ListItem>
+                      <asp:ListItem>Cần Thơ</asp:ListItem>
                       <asp:ListItem>Đà Nẵng</asp:ListItem>
                       <asp:ListItem>Hải Phòng</asp:ListItem>
                       <asp:ListItem>Hà Nội</asp:ListItem>
@@ -46,7 +46,7 @@
                   </div>
             </div>
    <%-- datalist--%>
-    <asp:DataList ID="dtlbaidang" runat="server" DataKeyField="maBaiDang" RepeatColumns="3" Width="81%">
+    <asp:DataList ID="dtlbaidang" runat="server" DataKeyField="maBaiDang" RepeatColumns="3" Width="81%" CssClass="table table-striped table-dark">
         <ItemTemplate>
             <asp:Image ID="imgLogo" Width="150px" Height="100px" runat="server" ImageUrl='<%#"~/Photos/" + Eval("logo") %>'/>
             <div class="cell-content">

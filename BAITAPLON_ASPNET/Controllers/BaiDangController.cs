@@ -1,4 +1,4 @@
-﻿using BTL_ASPNET_WEBGTVL.Models;
+﻿using BAITAPLON_ASPNET.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -14,7 +14,7 @@ namespace BAITAPLON_ASPNET.Controllers
         SqlConnection conn = null;
         public BaiDangController()
         {
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DVVIECLAMConnectionString2"].ConnectionString);
+            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DVVIECLAMConnectionString"].ConnectionString);
         }
         public DataTable getBaidang()
         {
@@ -26,10 +26,24 @@ namespace BAITAPLON_ASPNET.Controllers
             conn.Close();
             return dt;
         }
-        public DataTable getthroughDiachiandNganhNghe(string diachi,int maNganhNghe,string vitri)
+        public int getMantd(int mtk)
+        {
+                conn.Open();
+                int id = 0;
+                string sql = "SELECT maNhaTuyenDung FROM NhaTuyenDung WHERE maTaiKhoan = " + mtk + "";
+                var cmd = new SqlCommand(sql, conn);
+                var rd = cmd.ExecuteReader();
+                if (rd.Read())
+                {
+                    id = (int)rd["maNhaTuyenDung"];
+                }
+                conn.Close();
+                return id;
+        }
+        public DataTable getAllBaidang(int maNhaTuyenDung)
         {
             conn.Open();
-            String sql = "SELECT maBaiDang,tenNhaTuyenDung,tieuDe,viTriCongViec,logo,mucLuong,BaiDang.maNhaTuyenDung FROM BaiDang inner join NhaTuyenDung on NhaTuyenDung.maNhaTuyenDung = BaiDang.maNhaTuyenDung WHERE diaChi = '" + diachi + "' OR maNganhNghe = " + maNganhNghe + " OR viTriCongViec LIKE '%" + vitri + "%'";
+            string sql = "SELECT * FROM BaiDang WHERE maNhaTuyenDung = "+maNhaTuyenDung+"";
             var da = new SqlDataAdapter(sql, conn);
             var dt = new DataTable();
             da.Fill(dt);
@@ -56,8 +70,17 @@ namespace BAITAPLON_ASPNET.Controllers
                 bd.soDienThoai = (string)rd["soDienThoai"];
                 bd.diaChi = (string)rd["diaChi"];
             }
-            conn.Close();
             return bd;
+        }
+        public DataTable getthroughDiachiandNganhNghe(string diachi,int maNganhNghe,string vitri)
+        {
+            conn.Open();
+            String sql = "SELECT maBaiDang,tenNhaTuyenDung,tieuDe,viTriCongViec,logo,mucLuong,BaiDang.maNhaTuyenDung FROM BaiDang inner join NhaTuyenDung on NhaTuyenDung.maNhaTuyenDung = BaiDang.maNhaTuyenDung WHERE diaChi = '" + diachi + "' OR maNganhNghe = " + maNganhNghe + " OR viTriCongViec LIKE '%" + vitri + "%'";
+            var da = new SqlDataAdapter(sql, conn);
+            var dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            return dt;
         }
         public string addBaidang(BaiDang bd)
         {
@@ -105,7 +128,7 @@ namespace BAITAPLON_ASPNET.Controllers
             try
             {
                 conn.Open();
-                string sql = "UPDATE BaiDang SET maNhaTuyenDung = @mntd, tieuDe = @td, viTriCongViec = @vtcv,maNganhNghe = @mnn,moTa = @mt,soLuongTuyen = @slt,mucLuong = @ml,soDienThoai = @sdt,diaChi = @dc WHERE maBaiDang = @mbd";
+                string sql = "UPDATE BaiDang SET maNhaTuyenDung = @mntd,tieuDe = @td, viTriCongViec = @vtcv,maNganhNghe = @mnn,moTa = @mt,soLuongTuyen = @slt,mucLuong = @ml,soDienThoai = @sdt,diaChi = @dc WHERE maBaiDang = @mbd";
                 var cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("mntd", bd.maNhaTuyenDung);
                 cmd.Parameters.AddWithValue("td", bd.tieuDe);
