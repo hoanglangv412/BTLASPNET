@@ -37,6 +37,7 @@
     <asp:Table runat="server" ID="tbltaikhoan">
         <asp:TableRow>
             <asp:TableHeaderCell ColumnSpan="2">
+                <%--anh--%>
                 <asp:Image ID="imgavatar" runat="server" CssClass="imgavatar1"/>
                 <div class="btnchange">
                     <asp:FileUpload runat="server" ID="iduploadphotos" />

@@ -1,8 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="PostDetail.aspx.cs" Inherits="BAITAPLON_ASPNET.Views.PostDetail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        table{
+            margin: 0 auto;
+            margin-top:80px;
+        }
+        body{
+              background-color: #363b40;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:Table runat="server" ID="tblDetail">
+    <asp:Table runat="server" ID="tblDetail" CssClass="table table-striped table-dark" Width="81%">
         <asp:TableRow>
             <asp:TableCell>Mã bài đăng: </asp:TableCell>
             <asp:TableCell><asp:Label runat="server" ID="lblmabaidang" /></asp:TableCell>

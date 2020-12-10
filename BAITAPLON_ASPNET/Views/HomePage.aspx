@@ -62,7 +62,7 @@
                     </svg>
                     <asp:Label ID="mucLuongLabel" runat="server" Text='<%# Eval("mucLuong") %>'/>
                 </p>
-                <asp:LinkButton runat="server" ID="btnlinkDetails" Text="Chi tiết" PostBackUrl="PostDetail.aspx"/>
+                <a href="PostDetail.aspx?maBaiDang=<%#Eval("maBaiDang")%>">Chi tiết</a>
             </div>
         </ItemTemplate>
     </asp:DataList>

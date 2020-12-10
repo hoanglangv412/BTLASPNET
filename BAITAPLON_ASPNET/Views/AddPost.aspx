@@ -11,9 +11,15 @@
      td{
             border: 1px solid white;
         }
-                 body{
-                background-color: #363b40;
-            }
+     body{
+            background-color: #363b40;
+     }
+     .lbl{
+            margin:0 auto;
+            color: white;
+            width: 300px;
+            text-align: center;
+     }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -59,5 +65,7 @@
             <asp:TableCell><asp:Button runat="server" ID="btnadd" Text="Thêm" OnClick="btnadd_Click" CssClass="btn btn-success"/></asp:TableCell>
         </asp:TableRow>
     </asp:Table>
-            <asp:Label id="lblalert" runat="server"/>
+    <div class="lbl">
+        <asp:Label id="lblalert" runat="server"/>
+    </div>
 </asp:Content>

@@ -52,7 +52,6 @@ namespace BAITAPLON_ASPNET.Views
             iduploadphotos.Visible = true;
             string path = Server.MapPath("~/Photos/");
             iduploadphotos.PostedFile.SaveAs(path + iduploadphotos.FileName);
-
             //update
             TaiKhoan tkn = new TaiKhoan();
             tkn.maTaiKhoan = tk.maTaiKhoan;
