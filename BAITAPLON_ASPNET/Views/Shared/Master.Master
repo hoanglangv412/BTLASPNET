@@ -26,7 +26,6 @@
                     $('#LoginModal').modal('show');
                 });
             });
-            //radio show div
         </script>
 </head>
 <body>
@@ -100,12 +99,11 @@
                         <p class="text-xl-left">Bạn là: </p>
                           <asp:RadioButton runat="server" ID="rbadmin" Text="Admin" GroupName="rdbtn"/><br />
                           <asp:RadioButton runat="server" ID="rbnd" Text="Người dùng" GroupName="rdbtn"/><br />
-                          <asp:RadioButton runat="server" ID="rbntd" Text="Nhà tuyển dụng" GroupName="rdbtn"/><br />
-                          <div ID="nhatuyendungdiv" runat="server" style="margin-left:10px">
+                          <asp:RadioButton runat="server" ID="rbntd" Text="Nhà tuyển dụng" GroupName="rdbtn" OnClientClick="show2();"/><br />
+                          <div runat="server" style="margin-left:10px;" class="nhatuyendungdiv">
                                <p class="text-xl-left">Tên nhà tuyển dụng:</p><asp:TextBox runat="server" ID="txttennhatuyendung" /><br />
                                <p class="text-xl-left">Giới thiệu: </p><asp:TextBox runat="server" ID="txtgioithieu" /><br />
                           </div>
-
                       </div>
                       <div class="modal-footer">
                         <asp:Button ID="btnmodalsignin" class="btn btn-primary" runat="server" Text="Đăng kí" OnClick="btnmodalsignin_Click"/>

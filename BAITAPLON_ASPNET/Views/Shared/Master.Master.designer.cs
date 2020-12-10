@@ -204,15 +204,6 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         protected global::System.Web.UI.WebControls.RadioButton rbntd;
 
         /// <summary>
-        /// nhatuyendungdiv control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl nhatuyendungdiv;
-
-        /// <summary>
         /// txttennhatuyendung control.
         /// </summary>
         /// <remarks>

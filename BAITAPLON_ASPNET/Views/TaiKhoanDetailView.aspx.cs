@@ -18,7 +18,7 @@ namespace BAITAPLON_ASPNET.Views
             tk = (TaiKhoan)Session["tk"];
             imgavatar.ImageUrl = "~/Photos/" + tk.anh;
             lblmataikhoan.Text = (tk.maTaiKhoan).ToString();
-            lblmatkhau.Text = tk.matKhau;
+            lblmatkhau.Text = "**********";
             lbltentaikhoan.Text = tk.tenTaiKhoan;
             iduploadphotos.Visible = false;
             btnok.Visible = false;

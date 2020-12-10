@@ -14,14 +14,12 @@
             <asp:BoundField DataField="maCV" HeaderText="Mã CV" />
             <asp:BoundField DataField="tieuDe"   HeaderText="Tiêu đề" />
             <asp:BoundField DataField="ngayTao" HeaderText="Ngày tạo" />
-
             <asp:TemplateField HeaderText="Xóa">
                 <ItemTemplate>
                     <asp:Button class="btn btn-danger"  ID="btDel" runat="server" CommandName="xoa" CommandArgument='<%#Bind("maCV") %>' 
                         Text="Xóa" OnCommand="Xoa_Click" OnClientClick="return confirm('Bạn có chắc muốn xóa!')" /> 
                 </ItemTemplate>
             </asp:TemplateField>
-
              <asp:TemplateField HeaderText="Sửa">
                 <ItemTemplate>
                     <asp:Button class="btn btn-warning" ID="btEdit" runat="server" CommandName="sua" CommandArgument='<%#Bind("maCV") %>' 
@@ -30,7 +28,6 @@
             </asp:TemplateField>
         </Columns>   
     </asp:GridView>
-
     <asp:Button class="btn btn-success" style="margin-left: 11%;" ID="btAddCV" runat="server"
         PostBackUrl="~/Views/AddCV.aspx" Text="Thêm CV mới"/>
 </asp:Content>
