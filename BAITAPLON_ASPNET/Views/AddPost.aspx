@@ -11,17 +11,11 @@
      td{
             border: 1px solid white;
         }
-     body{
-            background-color: #363b40;
-     }
      .lbl{
             margin:0 auto;
             color: white;
             width: 300px;
             text-align: center;
-     }
-     body{
-            background-color: #363b40;
      }
     </style>
 </asp:Content>

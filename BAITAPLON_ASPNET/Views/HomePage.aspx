@@ -26,9 +26,6 @@
               top: 12%;
               left: 15%;
         }
-        body{
-              background-color: #363b40;
-        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

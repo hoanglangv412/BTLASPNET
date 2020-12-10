@@ -11,9 +11,6 @@
         td{
             border: 1px solid white;
         }
-                    body{
-                background-color: #363b40;
-            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -27,7 +24,7 @@
             <asp:BoundField DataField="anh" HeaderText="ảnh" SortExpression="anh"/>
         </Columns>
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DVVIECLAMConnectionString %>" DeleteCommand="DELETE FROM [TaiKhoan] WHERE [maTaiKhoan] = @maTaiKhoan" InsertCommand="INSERT INTO [TaiKhoan] ([tenTaiKhoan], [matKhau], [loaiTaiKhoan], [anh]) VALUES (@tenTaiKhoan, @matKhau, @loaiTaiKhoan, @anh)" SelectCommand="SELECT * FROM [TaiKhoan]" UpdateCommand="UPDATE [TaiKhoan] SET [tenTaiKhoan] = @tenTaiKhoan, [matKhau] = @matKhau, [loaiTaiKhoan] = @loaiTaiKhoan, [anh] = @anh WHERE [maTaiKhoan] = @maTaiKhoan">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DVVIECLAMConnectionString2 %>" DeleteCommand="DELETE FROM [TaiKhoan] WHERE [maTaiKhoan] = @maTaiKhoan" InsertCommand="INSERT INTO [TaiKhoan] ([tenTaiKhoan], [matKhau], [loaiTaiKhoan], [anh]) VALUES (@tenTaiKhoan, @matKhau, @loaiTaiKhoan, @anh)" SelectCommand="SELECT * FROM [TaiKhoan]" UpdateCommand="UPDATE [TaiKhoan] SET [tenTaiKhoan] = @tenTaiKhoan, [matKhau] = @matKhau, [loaiTaiKhoan] = @loaiTaiKhoan, [anh] = @anh WHERE [maTaiKhoan] = @maTaiKhoan">
         <DeleteParameters>
             <asp:Parameter Name="maTaiKhoan" Type="Int32" />
         </DeleteParameters>
