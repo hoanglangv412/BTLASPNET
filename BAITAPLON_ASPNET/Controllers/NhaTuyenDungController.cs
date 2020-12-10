@@ -14,7 +14,7 @@ namespace BAITAPLON_ASPNET.Controllers
         SqlConnection conn = null;
         public NhaTuyenDungController()
         {
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DVVIECLAMConnectionString"].ConnectionString);
+            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DVVIECLAMConnectionString2"].ConnectionString);
         }
         public DataTable getCongTy()
         {
