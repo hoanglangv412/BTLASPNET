@@ -19,7 +19,6 @@ namespace BAITAPLON_ASPNET.Views
                 hienthi();
             }
         }
-
         private void hienthi()
         {
             TaiKhoan tk = (TaiKhoan)Session["tk"];
