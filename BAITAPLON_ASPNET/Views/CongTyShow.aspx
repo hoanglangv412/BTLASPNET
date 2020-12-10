@@ -14,7 +14,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:DataList ID="ddlcongty" runat="server" DataKeyField="maNhaTuyenDung" RepeatColumns="4" CssClass="table table-striped table-dark" Width="81%">
+    <asp:DataList ID="ddlcongty" runat="server" DataKeyField="maNhaTuyenDung" RepeatColumns="4" CssClass="table table-striped table-dark" Width="90%">
         <ItemTemplate>
             <asp:Image ID="Image2" runat="server" ImageUrl='<%#"~/Photos/" + Eval("logo") %>' Width="150px" Height="100px"/>
             <div class="divinfo">

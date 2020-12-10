@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="BTL_ASPNET_WEBGTVL.Views.BaiDang.Show_DeleteBaiDangView" %>
+﻿<%@ Page Title="homepage" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="BTL_ASPNET_WEBGTVL.Views.BaiDang.Show_DeleteBaiDangView" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         td{
@@ -47,7 +47,7 @@
                   </div>
             </div>
    <%-- datalist--%>
-    <asp:DataList ID="dtlbaidang" runat="server" DataKeyField="maBaiDang" RepeatColumns="3" Width="81%" CssClass="table table-striped table-dark">
+    <asp:DataList ID="dtlbaidang" runat="server" DataKeyField="maBaiDang" RepeatColumns="3" Width="90%" CssClass="table table-striped table-dark">
         <ItemTemplate>
             <asp:Image ID="imgLogo" Width="150px" Height="100px" runat="server" ImageUrl='<%#"~/Photos/" + Eval("logo") %>'/>
             <div class="cell-content">

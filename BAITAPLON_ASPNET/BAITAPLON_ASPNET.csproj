@@ -70,16 +70,22 @@
     <Content Include="css\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Photos\amazon.jpg" />
+    <Content Include="Photos\calendar.jpg" />
     <Content Include="Photos\day1kieu.jpg" />
     <Content Include="Photos\day1lan.png" />
     <Content Include="Photos\day1manh.png" />
     <Content Include="Photos\day1minh.png" />
     <Content Include="Photos\day1sinh.png" />
     <Content Include="Photos\kaikaikiki.jpg" />
+    <Content Include="Photos\meo.jpg" />
+    <Content Include="Photos\meow.jpg" />
+    <Content Include="Views\AddCV.aspx" />
     <Content Include="Views\AddPost.aspx" />
     <Content Include="Views\CongTyShow.aspx" />
+    <Content Include="Views\EditCV.aspx" />
     <Content Include="Views\EditPost.aspx" />
     <Content Include="Views\HomePage.aspx" />
+    <Content Include="Views\ListCV.aspx" />
     <Content Include="Views\PostDetail.aspx" />
     <Content Include="Views\PostManagement.aspx" />
     <Content Include="Views\TaiKhoanDetailView.aspx" />
@@ -88,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\BaiDangController.cs" />
+    <Compile Include="Controllers\CVController.cs" />
     <Compile Include="Controllers\NganhNgheController.cs" />
     <Compile Include="Controllers\NhaTuyenDungController.cs" />
     <Compile Include="Controllers\TaiKhoanController.cs" />
@@ -95,10 +102,18 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BaiDang.cs" />
+    <Compile Include="Models\CV.cs" />
     <Compile Include="Models\NhaTuyenDung.cs" />
     <Compile Include="Models\NganhNghe.cs" />
     <Compile Include="Models\TaiKhoan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AddCV.aspx.cs">
+      <DependentUpon>AddCV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AddCV.aspx.designer.cs">
+      <DependentUpon>AddCV.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\AddPost.aspx.cs">
       <DependentUpon>AddPost.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -113,6 +128,13 @@
     <Compile Include="Views\CongTyShow.aspx.designer.cs">
       <DependentUpon>CongTyShow.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\EditCV.aspx.cs">
+      <DependentUpon>EditCV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\EditCV.aspx.designer.cs">
+      <DependentUpon>EditCV.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\EditPost.aspx.cs">
       <DependentUpon>EditPost.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,6 +148,13 @@
     </Compile>
     <Compile Include="Views\HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListCV.aspx.cs">
+      <DependentUpon>ListCV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ListCV.aspx.designer.cs">
+      <DependentUpon>ListCV.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\PostDetail.aspx.cs">
       <DependentUpon>PostDetail.aspx</DependentUpon>

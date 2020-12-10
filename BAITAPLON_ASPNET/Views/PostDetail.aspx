@@ -8,7 +8,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:Table runat="server" ID="tblDetail" CssClass="table table-striped table-dark" Width="81%">
+    <asp:Table runat="server" ID="tblDetail" CssClass="table table-striped table-dark" Width="90%">
         <asp:TableRow>
             <asp:TableCell>Mã bài đăng: </asp:TableCell>
             <asp:TableCell><asp:Label runat="server" ID="lblmabaidang" /></asp:TableCell>

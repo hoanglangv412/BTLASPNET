@@ -15,7 +15,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:GridView ID="grdpost" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-dark" Width="81%">
+    <asp:GridView ID="grdpost" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-dark" Width="90%">
         <Columns>
             <asp:BoundField DataField="maBaiDang" HeaderText="Mã Bài Đăng" />
             <asp:BoundField DataField="tieuDe" HeaderText="Tiêu đề" />

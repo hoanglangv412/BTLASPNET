@@ -20,7 +20,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <asp:Table ID="tbladdbaidang" runat="server" CssClass="table table-striped table-dark" Width="81%">
+        <asp:Table ID="tbladdbaidang" runat="server" CssClass="table table-striped table-dark" Width="90%">
         <asp:TableRow>
             <asp:TableCell>Mã nhà tuyển dụng: </asp:TableCell>
             <asp:TableCell><asp:Label runat="server" ID="lblmantd" /></asp:TableCell>

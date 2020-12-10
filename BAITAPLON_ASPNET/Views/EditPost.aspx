@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="EditPost.aspx.cs" Inherits="BAITAPLON_ASPNET.Views.EditPost" %>
+﻿<%@ Page Title="editpost" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="EditPost.aspx.cs" Inherits="BAITAPLON_ASPNET.Views.EditPost" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         table{
@@ -20,7 +20,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:Table ID="tbleditbaidang" runat="server" CssClass="table table-striped table-dark" Width="81%">
+    <asp:Table ID="tbleditbaidang" runat="server" CssClass="table table-striped table-dark" Width="90%">
         <asp:TableRow>
             <asp:TableCell>Mã bài đăng: </asp:TableCell>
             <asp:TableCell><asp:Label runat="server" ID="lblmabaidang" /></asp:TableCell>
