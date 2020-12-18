@@ -19,7 +19,9 @@ namespace BAITAPLON_ASPNET.Controllers
         public DataTable getBaidang()
         {
             conn.Open();
-            string sql = "SELECT maBaiDang,tenNhaTuyenDung,tieuDe,viTriCongViec,logo,mucLuong,BaiDang.maNhaTuyenDung FROM BaiDang inner join NhaTuyenDung on NhaTuyenDung.maNhaTuyenDung = BaiDang.maNhaTuyenDung";
+            string sql = "SELECT maBaiDang,tenNhaTuyenDung,tieuDe,viTriCongViec,anh,mucLuong,BaiDang.maNhaTuyenDung,NhaTuyenDung.maTaiKhoan FROM NhaTuyenDung " +
+                "inner join BaiDang on NhaTuyenDung.maNhaTuyenDung = BaiDang.maNhaTuyenDung " +
+                "inner join TaiKhoan on NhaTuyenDung.maTaiKhoan = TaiKhoan.maTaiKhoan";
             var da = new SqlDataAdapter(sql, conn);
             var dt = new DataTable();
             da.Fill(dt);
@@ -76,7 +78,9 @@ namespace BAITAPLON_ASPNET.Controllers
         public DataTable getthroughDiachiandNganhNghe(string diachi,int maNganhNghe,string vitri)
         {
             conn.Open();
-            String sql = "SELECT maBaiDang,tenNhaTuyenDung,tieuDe,viTriCongViec,logo,mucLuong,BaiDang.maNhaTuyenDung FROM BaiDang inner join NhaTuyenDung on NhaTuyenDung.maNhaTuyenDung = BaiDang.maNhaTuyenDung WHERE diaChi = '" + diachi + "' OR maNganhNghe = " + maNganhNghe + " OR viTriCongViec LIKE '%" + vitri + "%'";
+            String sql = "SELECT maBaiDang,tenNhaTuyenDung,tieuDe,viTriCongViec,anh,mucLuong,BaiDang.maNhaTuyenDung FROM NhaTuyenDung " +
+                "inner join BaiDang on NhaTuyenDung.maNhaTuyenDung = BaiDang.maNhaTuyenDung " +
+                "inner join TaiKhoan on TaiKhoan.maTaiKhoan = NhaTuyenDung.maTaiKhoan WHERE diaChi = '" + diachi + "' OR maNganhNghe = " + maNganhNghe + " OR viTriCongViec LIKE '%" + vitri + "%'";
             var da = new SqlDataAdapter(sql, conn);
             var dt = new DataTable();
             da.Fill(dt);

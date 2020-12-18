@@ -19,7 +19,7 @@ namespace BAITAPLON_ASPNET.Controllers
         public DataTable getCongTy()
         {
             conn.Open();
-            string path = "SELECT * FROM NhaTuyenDung";
+            string path = "SELECT * FROM NhaTuyenDung inner join TaiKhoan on TaiKhoan.maTaiKhoan = NhaTuyenDung.maTaiKhoan";
             var da = new SqlDataAdapter(path, conn);
             var dt = new DataTable();
             da.Fill(dt);
@@ -31,12 +31,11 @@ namespace BAITAPLON_ASPNET.Controllers
             try
             {
                 conn.Open();
-                string path = "INSERT INTO NhaTuyenDung VALUES(@tntd,@mtk,@gt,@logo)";
+                string path = "INSERT INTO NhaTuyenDung VALUES(@tntd,@mtk,@gt)";
                 var cmd = new SqlCommand(path, conn);
                 cmd.Parameters.AddWithValue("tntd", ntd.tenNhaTuyenDung);
                 cmd.Parameters.AddWithValue("mtk", ntd.maTaiKhoan);
                 cmd.Parameters.AddWithValue("gt", ntd.gioithieu);
-                cmd.Parameters.AddWithValue("logo", ntd.logo);
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 return "Thanh cong";

@@ -22,7 +22,7 @@ namespace BAITAPLON_ASPNET.Views
                 txtTieuDe.Text = c.tieuDe;
                 txtHoten.Text = c.hoTen;
                 //date pick?
-                txtNgaySinh.Text = c.ngaySinh.ToString("dd/MM/yyyy");
+                txtNgaySinh.Text = c.ngaySinh.ToString("MM/dd/yyyy");
 
                 //tieptuc
                 txtGioiTinh.Text = c.gioiTinh;
@@ -37,7 +37,7 @@ namespace BAITAPLON_ASPNET.Views
                 //get anh the
                 imgCV.ImageUrl = "~/Photos/" + c.anhThe;
                 oldAvt = c.anhThe;
-                txtNgayTao.Text = c.ngayTao.ToString("dd/MM/yyyy");
+                txtNgayTao.Text = c.ngayTao.ToString("MM/dd/yyyy");
                 clDate.Visible = false;
             }
         }
@@ -57,7 +57,7 @@ namespace BAITAPLON_ASPNET.Views
 
         protected void clDate_SelectionChanged(object sender, EventArgs e)
         {
-            txtNgaySinh.Text = clDate.SelectedDate.ToString("dd/MM/yyyy");
+            txtNgaySinh.Text = clDate.SelectedDate.ToString("MM/dd/yyyy");
             clDate.Visible = false;
         }
 
@@ -96,10 +96,10 @@ namespace BAITAPLON_ASPNET.Views
                 }
 
                 c.anhThe = browserAvatar.FileName;
-                c.ngayTao = DateTime.Parse(DateTime.Now.ToString("dd/MM/yyyy"));
+                c.ngayTao = DateTime.Parse(DateTime.Now.ToString("MM/dd/yyyy"));
 
                 dataCV.SuaCV(c);
-                EditCV.MessageBox(this,"Suawr Thanh Cong");
+                EditCV.MessageBox(this,"Sua Thanh Cong");
             }
             catch (Exception)
             {

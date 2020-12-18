@@ -49,7 +49,7 @@
    <%-- datalist--%>
     <asp:DataList ID="dtlbaidang" runat="server" DataKeyField="maBaiDang" RepeatColumns="3" Width="90%" CssClass="table table-striped table-dark">
         <ItemTemplate>
-            <asp:Image ID="imgLogo" Width="150px" Height="100px" runat="server" ImageUrl='<%#"~/Photos/" + Eval("logo") %>'/>
+            <asp:Image ID="imgLogo" Width="150px" Height="100px" runat="server" ImageUrl='<%#"~/Photos/" + Eval("anh") %>'/>
             <div class="cell-content">
                  <h6><asp:Label ID="viTriCongVIecLabel" runat="server" Text='<%# Eval("viTriCongVIec") %>'/> - <asp:Label ID="tieuDeLabel" runat="server" Text='<%# Eval("tieuDe") %>' /></h6>
                 <p>Công ty: <asp:Label ID="tenNhaTuyenDungLabel" runat="server" Text='<%# Eval("tenNhaTuyenDung") %>' /></p>

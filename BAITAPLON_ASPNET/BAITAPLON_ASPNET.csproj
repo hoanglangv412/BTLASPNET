@@ -90,6 +90,7 @@
     <Content Include="Views\PostManagement.aspx" />
     <Content Include="Views\TaiKhoanDetailView.aspx" />
     <Content Include="Views\UsersShow.aspx" />
+    <Content Include="Views\CVdetail.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -191,6 +192,13 @@
     </Compile>
     <Compile Include="Views\UsersShow.aspx.designer.cs">
       <DependentUpon>UsersShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CVdetail.aspx.cs">
+      <DependentUpon>CVdetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CVdetail.aspx.designer.cs">
+      <DependentUpon>CVdetail.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

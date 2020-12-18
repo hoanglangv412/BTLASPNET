@@ -35,9 +35,11 @@ namespace BAITAPLON_ASPNET.Controllers
                 c.diaChi = (string)rd["diaChi"];
                 c.dienThoai = (string)rd["soDienThoai"];
                 c.email = (string)rd["email"];
-                c.hocVan = (string)rd["kinhNghiem"];
+                c.hocVan = (string)rd["hocVan"];
+                c.kinhNghiem = (string)rd["kinhNghiem"];
                 c.kyNang = (string)rd["kyNang"];
-                c.thongTinThem = (string)rd["anhThe"];
+                c.thongTinThem = (string)rd["thongtinThem"];
+                c.anhThe = (string)rd["anhThe"];
                 c.ngayTao = (DateTime)rd["ngayTao"];
                 dsCV.Add(c);
             }

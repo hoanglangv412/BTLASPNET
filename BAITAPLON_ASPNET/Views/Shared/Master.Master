@@ -100,8 +100,8 @@
                           <asp:RadioButton runat="server" ID="rbadmin" Text="Admin" GroupName="rdbtn"/><br />
                           <asp:RadioButton runat="server" ID="rbnd" Text="Người dùng" GroupName="rdbtn"/><br />
                           <asp:RadioButton runat="server" ID="rbntd" Text="Nhà tuyển dụng" GroupName="rdbtn" OnClientClick="show2();"/><br />
-                          <div runat="server" style="margin-left:10px;" class="nhatuyendungdiv">
-                               <p class="text-xl-left">Tên nhà tuyển dụng:</p><asp:TextBox runat="server" ID="txttennhatuyendung" /><br />
+                          <div runat="server" style="margin-left:10px;" class="nhatuyendungdiv" id="test">
+                               <p class="text-xl-left">Tên nhà tuyển dụng:</p><asp:TextBox runat="server" ID="txttennhatuyendung"/><br />
                                <p class="text-xl-left">Giới thiệu: </p><asp:TextBox runat="server" ID="txtgioithieu" /><br />
                           </div>
                       </div>

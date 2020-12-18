@@ -18,7 +18,7 @@ namespace BAITAPLON_ASPNET.Views
         {
             if(!IsPostBack)
             {
-                txtNgayTao.Text= DateTime.Now.ToString("dd/MM/yyyy");
+                txtNgayTao.Text= DateTime.Now.ToString("MM/dd/yyyy");
                 clDate.Visible = false;
             }
         }     
@@ -38,7 +38,7 @@ namespace BAITAPLON_ASPNET.Views
 
         protected void clDate_SelectionChanged(object sender, EventArgs e)
         {
-            txtNgaySinh.Text = clDate.SelectedDate.ToString("dd/MM/yyyy");
+            txtNgaySinh.Text = clDate.SelectedDate.ToString("MM/dd/yyyy");
             clDate.Visible = false;
         }
 
@@ -77,7 +77,7 @@ namespace BAITAPLON_ASPNET.Views
                     imgCV.ImageUrl = "~/Photos/" + browserAvatar.FileName;
 
                 c.anhThe = browserAvatar.FileName;
-                c.ngayTao = DateTime.Parse(DateTime.Now.ToString("dd/MM/yyyy"));
+                c.ngayTao = DateTime.Parse(DateTime.Now.ToString("MM/dd/yyyy"));
 
                 dataCV.ThemCV(c);
                 EditCV.MessageBox(this, "Thêm Thanh Cong");

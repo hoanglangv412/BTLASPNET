@@ -29,6 +29,11 @@ namespace BAITAPLON_ASPNET.Views
             lblsdt.Text = bd.soDienThoai;
             lbldiachi.Text = bd.diaChi;
             DataList1.Visible = false;
+            TaiKhoan tk = (TaiKhoan)Session["tk"];
+            if(tk.loaiTaiKhoan == 1)
+            {
+                btnApply.Visible = false;
+            }
         }
         protected void btnApply_Click(object sender, EventArgs e)
         {
@@ -58,7 +63,7 @@ namespace BAITAPLON_ASPNET.Views
             {
                 int macv = Convert.ToInt32(e.CommandArgument.ToString());
                 int id = Convert.ToInt32(Request.QueryString["maBaiDang"]);
-                DateTime dt = DateTime.Parse(DateTime.Now.ToString("dd/MM/yyyy"));
+                DateTime dt = DateTime.Parse(DateTime.Now.ToString("MM/dd/yyyy"));
                 if(utc.checker(macv,id) == 0)
                 {
                     string text = utc.addUngTuyen(macv, id, dt);

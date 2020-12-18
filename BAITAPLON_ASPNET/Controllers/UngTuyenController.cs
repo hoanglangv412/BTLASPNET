@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -19,11 +20,12 @@ namespace BAITAPLON_ASPNET.Controllers
             try
             {
                 conn.Open();
-                string path = "INSERT INTO UngTuyen VALUES(@macv,@mabd,@ngayut)";
+                string path = "INSERT INTO UngTuyen VALUES(@macv,@mabd,@ngayut,@duyet)";
                 var cmd = new SqlCommand(path, conn);
                 cmd.Parameters.AddWithValue("macv", macv);
                 cmd.Parameters.AddWithValue("mabd", mabd);
                 cmd.Parameters.AddWithValue("ngayut", date);
+                cmd.Parameters.AddWithValue("duyet",0);
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 return "Thành công";
@@ -32,6 +34,16 @@ namespace BAITAPLON_ASPNET.Controllers
             {
                 return "Thất bại";
             }
+        }
+        public DataTable getUngtuyen(int mabd)
+        {
+                conn.Open();
+                string path = "SELECT * FROM UngTuyen WHERE maBaiDang = "+mabd+"";
+                var da = new SqlDataAdapter(path, conn);
+                var dt = new DataTable();
+                da.Fill(dt);
+                conn.Close();
+                return dt;
         }
         public string delUngTuyen(int macv, int mabd)
         {

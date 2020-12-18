@@ -59,7 +59,6 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
             string TaiKhoan = txttaikhoan.Text;
             string MatKhau = txtmatkhau.Text;
             TaiKhoan tk = new TaiKhoan();
-            int count = Convert.ToInt32(Application["count"]);
             if (tkc.checkTaiKhoan(TaiKhoan, MatKhau) == 0)
             {
                 tk = tkc.getTaiKhoan(TaiKhoan);
@@ -97,10 +96,13 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
             if (rbntd.Checked)
             {
                 loaitaikhoan = 1;
+                txttennhatuyendung.Visible = true;
+                txtgioithieu.Visible = true;
             }
             if (rbnd.Checked)
             {
                 loaitaikhoan = 2;
+                
             }
             TaiKhoan tk = new TaiKhoan();
             tk.tenTaiKhoan = taikhoan;
