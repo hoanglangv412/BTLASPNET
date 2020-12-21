@@ -28,8 +28,17 @@ namespace BAITAPLON_ASPNET.Views
         {
             if(e.CommandName=="xoa")
             {
-                dataCV.DelCV(Convert.ToInt32(e.CommandArgument));
-                HienThi();
+                int macv = Convert.ToInt32(e.CommandArgument);
+                if (!dataCV.CheckCVPostedIsNull(macv))
+                {
+                    Response.Write("<script> alert('Bạn đã ứng tuyển CV này rồi !') </script>");
+                }
+                else
+                {
+                    dataCV.DelCV(macv);
+                    HienThi();
+                }
+                
             }
         }
 

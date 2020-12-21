@@ -26,8 +26,16 @@
                         Text="Sửa" OnCommand="Sua_Click" /> 
                 </ItemTemplate>
             </asp:TemplateField>
+            <asp:TemplateField HeaderText="Xem">
+                 <ItemTemplate>
+                    <a href="<%# String.Format("CVdetail.aspx?macv={0}", Eval("macv")) %>">Xem chi tiết</a>
+                </ItemTemplate>
+            </asp:TemplateField>
+
         </Columns>   
     </asp:GridView>
     <asp:Button class="btn btn-success" style="margin-left: 11%;" ID="btAddCV" runat="server"
         PostBackUrl="~/Views/AddCV.aspx" Text="Thêm CV mới"/>
+    <asp:Button class="btn btn-success" style="margin-left: 11%;" ID="btCVPosted" runat="server"
+        PostBackUrl="~/Views/ListCVPosted.aspx" Text="DS CV ứng tuyển"/>
 </asp:Content>

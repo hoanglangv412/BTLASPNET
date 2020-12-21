@@ -162,9 +162,6 @@ namespace BAITAPLON_ASPNET.Controllers
         }
 
 
-
-
-
         //Xóa CV
         public void DelCV(int maCV)
         {
@@ -174,6 +171,44 @@ namespace BAITAPLON_ASPNET.Controllers
             cmd.ExecuteNonQuery();
             conn.Close();
         }
-        
+
+
+        //Lấy danh sách CV đã đăng ứng tuyển
+
+        public DataTable getCVPosted(int maTaiKhoan)
+        {
+            conn.Open();
+            string sql = "select * from  CV inner join UngTuyen on CV.maCV = UngTuyen.maCV where maTaiKhoan=" + maTaiKhoan + "";
+            var da = new SqlDataAdapter(sql, conn);
+            var dtTable = new DataTable();
+            da.Fill(dtTable);
+            conn.Close();
+            return dtTable;
+        }
+        //Xóa CV trong danh sách Cv đã ứng tuyển
+        public void delCVPosted(int maCV, int maBaiDang)
+        {
+            conn.Open();
+            string sql = "delete from UngTuyen where maCV= " + maCV + " and maBaiDang="+maBaiDang+"";
+            var cmd = new SqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        //Check xem CV đã Ứng tuyển chưa
+        public bool CheckCVPostedIsNull(int macv)
+        {
+            conn.Open();
+            bool fl=true;
+            string sql = "select * from UngTuyen where maCV= " + macv + "";
+            SqlCommand cmd = new SqlCommand(sql,conn);
+            SqlDataReader rd = cmd.ExecuteReader();
+            if(rd.Read())//nếu ds trống
+            {
+                fl = false;
+            }
+
+            conn.Close();
+            return fl;
+        }
     }
 }
