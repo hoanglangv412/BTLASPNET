@@ -55,7 +55,6 @@ namespace BAITAPLON_ASPNET.Views
                 lstbd.Add(bd);
                 grdpost.DataSource = lstbd;
                 grdUngtuyen.DataSource = utc.getUngtuyen(Convert.ToInt32(e.CommandArgument.ToString()));
-                //lblboolean.Text = grdUngtuyen.Columns[3].ToString();
                 lbltitle.Visible = true;
                 lbltitle.Text = "Danh sách CV đã ứng tuyển";
                 DataBind();

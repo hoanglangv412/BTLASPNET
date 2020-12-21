@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="CongTyShow.aspx.cs" Inherits="BAITAPLON_ASPNET.Views.CongTyShow" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="CompanyShow.aspx.cs" Inherits="BAITAPLON_ASPNET.Views.CongTyShow" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         td{

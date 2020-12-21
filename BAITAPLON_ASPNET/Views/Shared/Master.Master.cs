@@ -69,7 +69,8 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
             {
                 tk = tkc.getTaiKhoan(TaiKhoan);
                 Session["tk"] = tk;
-                Page_Load(sender, e);
+                //Page_Load(sender, e);
+                Response.Redirect("HomePage.aspx");
             }
             if (tkc.checkTaiKhoan(TaiKhoan, MatKhau) == 2)
             {

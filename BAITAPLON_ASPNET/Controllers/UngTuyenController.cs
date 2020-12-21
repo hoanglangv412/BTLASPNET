@@ -45,15 +45,16 @@ namespace BAITAPLON_ASPNET.Controllers
                 conn.Close();
                 return dt;
         }
-        public string delUngTuyen(int macv, int mabd)
+        public string updUngTuyen(int macv, int mabd,int duyet)
         {
             try
             {
                 conn.Open();
-                string path = "DELETE FROM UngTuyen WHERE maCV = @macv AND maBaiDang = @mabd";
+                string path = "UPDATE UngTuyen SET duyet = @duyet WHERE maCV = @macv AND maBaiDang = @mabd";
                 var cmd = new SqlCommand(path, conn);
                 cmd.Parameters.AddWithValue("macv", macv);
                 cmd.Parameters.AddWithValue("mabd", mabd);
+                cmd.Parameters.AddWithValue("duyet", duyet);
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 return "Thành công";

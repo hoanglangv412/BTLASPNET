@@ -13,6 +13,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.BaiDang
     {
         BaiDangController bdc = new BaiDangController();
         NganhNgheController nnc = new NganhNgheController();
+        CVController cvc = new CVController();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -22,7 +23,27 @@ namespace BTL_ASPNET_WEBGTVL.Views.BaiDang
                 ddlnganhnghe.DataValueField = "maNganhNghe";
                 ddlnganhnghe.DataBind();
             }
+            TaiKhoan tk = (TaiKhoan)Session["tk"];
+            if(tk == null)
+            {
+                dtlbaidang.Visible = true;
+                dtlcv.Visible = false;
+            }
+            if (tk != null)
+            {
+                if (tk.loaiTaiKhoan == 1)
+                {
+                    dtlcv.Visible = true;
+                    dtlbaidang.Visible = false;
+                }
+                if (tk.loaiTaiKhoan == 2)
+                {
+                    dtlbaidang.Visible = true;
+                    dtlcv.Visible = false;
+                }
+            }
             dtlbaidang.DataSource = bdc.getBaidang();
+            dtlcv.DataSource = cvc.getCV();
             DataBind();
         }
         protected void DDLpositionDataBound(object sender, EventArgs e)

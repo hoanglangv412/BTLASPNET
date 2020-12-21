@@ -49,17 +49,12 @@
     <asp:GridView ID="grdUngtuyen" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-dark" Width="90%">
         <Columns>
             <asp:BoundField DataField="macv" HeaderText="Mã CV" />
+            <asp:BoundField DataField="maBaiDang" HeaderText="Mã bài đăng" />
             <asp:BoundField DataField="ngayUngtuyen" HeaderText="Ngày ứng tuyển" />
             <asp:BoundField DataField="duyet" HeaderText="Duyệt" />
-            <asp:TemplateField HeaderText="Duyệt">
-                <ItemTemplate>
-                    <asp:Button runat="server" Text="Duyệt" CssClass="btn btn-success" ID="btnduyet" />
-                    <asp:Button runat="server" Text="Đã duyệt" CssClass="btn btn-block" ID="btndaduyet"/>
-                </ItemTemplate>
-            </asp:TemplateField>
             <asp:TemplateField HeaderText="Chi tiết CV">
                 <ItemTemplate>
-                    <a href="<%# String.Format("CVdetail.aspx?macv={0}", Eval("macv")) %>">Xem chi tiết</a>
+                    <a href="<%# String.Format("CVdetail.aspx?macv={0}&mabd={1}&duyet={2}", Eval("macv"), Eval("maBaiDang"), Eval("duyet")) %>">Xem chi tiết</a>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>

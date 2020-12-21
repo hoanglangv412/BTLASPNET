@@ -58,5 +58,14 @@ namespace BTL_ASPNET_WEBGTVL.Views.BaiDang
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataList dtlbaidang;
+
+        /// <summary>
+        /// dtlcv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataList dtlcv;
     }
 }

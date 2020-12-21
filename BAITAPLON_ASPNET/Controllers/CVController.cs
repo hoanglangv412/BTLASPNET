@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -46,7 +47,16 @@ namespace BAITAPLON_ASPNET.Controllers
             conn.Close();
             return dsCV;
         }
-
+        public DataTable getCV()
+        {
+            conn.Open();
+            string sql = "select * from CV";
+            var da = new SqlDataAdapter(sql, conn);
+            var dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            return dt;
+        }
         //Sửa CV
         public void SuaCV(CV c)
         {

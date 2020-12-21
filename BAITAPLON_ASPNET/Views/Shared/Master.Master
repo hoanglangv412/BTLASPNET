@@ -43,10 +43,10 @@
                     <a class="navbar-brand" href="PostManagement.aspx">Quản lí tin tuyển Dụng</a>
                   </li>
                   <li class="nav-item active" ID="litaikhoan" runat="server">
-                    <a class="navbar-brand" href="TaiKhoanDetailView.aspx">Quản lí tài khoản</a>
+                    <a class="navbar-brand" href="AccountDetailView.aspx">Quản lí tài khoản</a>
                   </li>
                     <li class="nav-item active" ID="licongty" runat="server">
-                    <a class="navbar-brand" href="CongTyShow.aspx">Công ty</a>
+                    <a class="navbar-brand" href="CompanyShow.aspx">Công ty</a>
                   </li>
                   <li class="nav-item active" ID="linguoidung" runat="server">
                     <a class="navbar-brand" href="UsersShow.aspx">Danh sách người dùng</a>

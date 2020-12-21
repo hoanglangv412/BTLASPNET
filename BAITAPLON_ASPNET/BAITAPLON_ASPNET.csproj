@@ -81,14 +81,14 @@
     <Content Include="Photos\meow.jpg" />
     <Content Include="Views\AddCV.aspx" />
     <Content Include="Views\AddPost.aspx" />
-    <Content Include="Views\CongTyShow.aspx" />
+    <Content Include="Views\CompanyShow.aspx" />
     <Content Include="Views\EditCV.aspx" />
     <Content Include="Views\EditPost.aspx" />
     <Content Include="Views\HomePage.aspx" />
     <Content Include="Views\ListCV.aspx" />
     <Content Include="Views\PostDetail.aspx" />
     <Content Include="Views\PostManagement.aspx" />
-    <Content Include="Views\TaiKhoanDetailView.aspx" />
+    <Content Include="Views\AccountDetailView.aspx" />
     <Content Include="Views\UsersShow.aspx" />
     <Content Include="Views\CVdetail.aspx" />
     <Content Include="Web.config" />
@@ -123,12 +123,12 @@
     <Compile Include="Views\AddPost.aspx.designer.cs">
       <DependentUpon>AddPost.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\CongTyShow.aspx.cs">
-      <DependentUpon>CongTyShow.aspx</DependentUpon>
+    <Compile Include="Views\CompanyShow.aspx.cs">
+      <DependentUpon>CompanyShow.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\CongTyShow.aspx.designer.cs">
-      <DependentUpon>CongTyShow.aspx</DependentUpon>
+    <Compile Include="Views\CompanyShow.aspx.designer.cs">
+      <DependentUpon>CompanyShow.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\EditCV.aspx.cs">
       <DependentUpon>EditCV.aspx</DependentUpon>
@@ -179,12 +179,12 @@
     <Compile Include="Views\Shared\Master.Master.designer.cs">
       <DependentUpon>Master.Master</DependentUpon>
     </Compile>
-    <Compile Include="Views\TaiKhoanDetailView.aspx.cs">
-      <DependentUpon>TaiKhoanDetailView.aspx</DependentUpon>
+    <Compile Include="Views\AccountDetailView.aspx.cs">
+      <DependentUpon>AccountDetailView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\TaiKhoanDetailView.aspx.designer.cs">
-      <DependentUpon>TaiKhoanDetailView.aspx</DependentUpon>
+    <Compile Include="Views\AccountDetailView.aspx.designer.cs">
+      <DependentUpon>AccountDetailView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\UsersShow.aspx.cs">
       <DependentUpon>UsersShow.aspx</DependentUpon>

@@ -59,7 +59,30 @@
                     </svg>
                     <asp:Label ID="mucLuongLabel" runat="server" Text='<%# Eval("mucLuong") %>'/>
                 </p>
-                <a href="PostDetail.aspx?maBaiDang=<%#Eval("maBaiDang")%>">Chi tiết</a>
+                <a href="PostDetail.aspx?maBaiDang=<%#Eval("maBaiDang")%>">Chi tiết</a> 
+            </div>
+        </ItemTemplate>
+        </asp:DataList>
+    <asp:DataList ID="dtlcv" runat="server" DataKeyField="maCV" RepeatColumns="3" Width="90%" CssClass="table table-striped table-dark">
+        <ItemTemplate>
+            <asp:Image ID="imgLogo" Width="150px" Height="100px" runat="server" ImageUrl='<%#"~/Photos/" + Eval("anhThe") %>'/>
+            <div class="cell-content">
+                Tiêu đề:
+                <asp:Label ID="tieuDeLabel" runat="server" Text='<%# Eval("tieuDe") %>' />
+                <br />
+                Họ tên:
+                <asp:Label ID="hoTenLabel" runat="server" Text='<%# Eval("hoTen") %>' />
+                <br />
+                Địa chỉ:
+                <asp:Label ID="diaChiLabel" runat="server" Text='<%# Eval("diaChi") %>' />
+                <br />
+                Kinh nghiệm:
+                <asp:Label ID="kinhNghiemLabel" runat="server" Text='<%# Eval("kinhNghiem") %>' />
+                <br />
+                Kĩ năng:
+                <asp:Label ID="kyNangLabel" runat="server" Text='<%# Eval("kyNang") %>' />
+                <br />
+                <a href="CVdetail.aspx?maCV=<%#Eval("maCV")%>">Chi tiết</a> 
             </div>
         </ItemTemplate>
     </asp:DataList>
