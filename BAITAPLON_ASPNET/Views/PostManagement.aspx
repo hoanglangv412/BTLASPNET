@@ -3,7 +3,6 @@
     <style>
         table{
             margin: 0 auto;
-            margin-top: 80px;
         }
         td{
             border: 1px solid white;
@@ -12,13 +11,25 @@
             width: 90%;
             margin:0 auto;
         }
+        .btnsearchgroup {
+            height: 50px;
+            margin: 0 auto;
+            width: 90%;
+        }
+        .alertDiv{
+            margin:0 auto;
+            width:90%;
+            color:white;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div id="searchGr">
-        <p>Tìm kiếm: <asp:TextBox ID="txtSearch" runat="server" placeholder="Nhập bài đăng cần tìm" />
-            <asp:Button ID="btSearch" class="btn btn-primary" runat="server" Text="Tìm kiếm" OnClick="btSearch_Click" /> </p>
-    
+           <div class="btnsearchgroup">
+                  <asp:TextBox runat="server" ID="txtsearch" placeholder="Nhập vị trí cần tìm" Width="50%" Height="50px"/>&nbsp;&nbsp;
+                  <asp:Button runat="server" ID="btnsearch" text="Tìm" OnClick="btnsearch_Click" CssClass="btn btn-primary"/>&nbsp;&nbsp;
+            </div>
+    <div class="alertDiv">
+        <asp:Label ID="lblalert" runat="server" />
     </div>
     <asp:GridView ID="grdpost" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-dark" Width="90%">
         <Columns>
@@ -45,7 +56,7 @@
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
-    <div class="grpadd">
+    <div class="alertDiv">
             <asp:Button runat="server" Text="Thêm bài đăng" ID="btadd" PostBackUrl="AddPost.aspx" CssClass="btn btn-success"/>
     </div>
 </asp:Content>

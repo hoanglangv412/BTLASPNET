@@ -46,9 +46,28 @@ namespace BAITAPLON_ASPNET.Views
                 Response.Redirect("EditPost.aspx");
             }
         }
-        protected void btSearchClick(object sender, CommandEventArgs e)
+        protected void btnsearch_Click(object sender, EventArgs e)
         {
-            
+            TaiKhoan tk = (TaiKhoan)Session["tk"];
+            int id = bdc.getMantd(tk.maTaiKhoan);
+            if (txtsearch.Text != null)
+            {       
+                grdpost.DataSource = bdc.SearchPost(id,txtsearch.Text);
+                DataBind();
+            }
+            else
+            {
+                grdpost.DataSource = bdc.SearchPost(id,"");
+                DataBind();
+            }
+            if(grdpost.Rows.Count == 0)
+            {
+                lblalert.Text = "Không tìm thấy bài đăng phù hợp.";
+            }
+            else
+            {
+                lblalert.Text = "";
+            }
         }
     }
 }

@@ -1,11 +1,9 @@
 ﻿<%@ Page Title="homepage" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="BTL_ASPNET_WEBGTVL.Views.BaiDang.Show_DeleteBaiDangView" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
-        td{
-            border: 1px solid white;
-        }
         table{
             margin: 0 auto;
+            color: white;
         }
         .btnsearchgroup{
               height: 50px;
@@ -37,7 +35,7 @@
                       <asp:ListItem>Thái Bình</asp:ListItem>
                   </asp:DropDownList>
                   <asp:DropDownList class="btn btn-secondary dropdown-toggle" ID="ddlnganhnghe" runat="server"  ondatabound="DDLpositionDataBound"/>
-                  <asp:TextBox runat="server" ID="txtsearch" placeholder="Nhập công việc cần tìm" Width="50%" Height="50px"/>&nbsp;&nbsp;
+                  <asp:TextBox runat="server" ID="txtsearch" placeholder="Nhập vị trí cần tìm" Width="50%" Height="50px"/>&nbsp;&nbsp;
                   <asp:Button runat="server" ID="btnsearch" text="Tìm" OnClick="btnsearch_Click" CssClass="btn btn-primary"/>&nbsp;&nbsp;
                   </div>
             </div>
@@ -66,8 +64,8 @@
                         <asp:TableCell><asp:Label ID="Label3" runat="server" Text='<%# Eval("mucLuong") %>'/></asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow>
-                        <asp:TableCell ColumnSpan="3">
-                            <a href="PostDetail.aspx?maBaiDang=<%#Eval("maBaiDang")%>" style="float:left">Chi tiết</a> 
+                        <asp:TableCell ColumnSpan="3" CssClass="cell-lastcell" Width="100%">
+                            <a href="PostDetail.aspx?maBaiDang=<%#Eval("maBaiDang")%>">Chi tiết</a> 
                         </asp:TableCell>
                     </asp:TableRow>
                 </asp:Table>

@@ -62,6 +62,6 @@
                     <asp:Button runat="server" ID="btnagree" text="Xác nhận" CssClass="btn btn-primary" OnClick="btnagree_Click"/>
                   </div>
                 </div>
-                <asp:Label id="lblalert" runat="server" ForeColor="Red"/>
+                <asp:Label ID="lblalert" runat="server" ForeColor="Red"/>
                 <!-- Split dropright button -->
             </asp:TableCell></asp:TableRow></asp:Table></asp:Content>

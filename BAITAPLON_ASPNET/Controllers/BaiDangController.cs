@@ -32,7 +32,8 @@ namespace BAITAPLON_ASPNET.Controllers
         {
                 conn.Open();
                 int id = 0;
-                string sql = "SELECT maNhaTuyenDung FROM NhaTuyenDung WHERE maTaiKhoan = " + mtk + "";
+                string sql = "SELECT maNhaTuyenDung FROM NhaTuyenDung " +
+                "WHERE maTaiKhoan = " + mtk + "";
                 var cmd = new SqlCommand(sql, conn);
                 var rd = cmd.ExecuteReader();
                 if (rd.Read())
@@ -45,7 +46,10 @@ namespace BAITAPLON_ASPNET.Controllers
         public DataTable getAllBaidang(int maNhaTuyenDung)
         {
             conn.Open();
-            string sql = "SELECT * FROM BaiDang WHERE maNhaTuyenDung = "+maNhaTuyenDung+"";
+            string sql = "SELECT * FROM NhaTuyenDung " +
+                "inner join BaiDang on NhaTuyenDung.maNhaTuyenDung = BaiDang.maNhaTuyenDung " +
+                "inner join TaiKhoan on NhaTuyenDung.maTaiKhoan = TaiKhoan.maTaiKhoan " +
+                "WHERE BaiDang.maNhaTuyenDung = " +maNhaTuyenDung+"";
             var da = new SqlDataAdapter(sql, conn);
             var dt = new DataTable();
             da.Fill(dt);
@@ -78,7 +82,7 @@ namespace BAITAPLON_ASPNET.Controllers
         public DataTable getthroughDiachiandNganhNghe(string diachi,string maNganhNghe,string vitri)
         {
             conn.Open();
-            String sql = "SELECT maBaiDang,tenNhaTuyenDung,tieuDe,viTriCongViec,anh,mucLuong,BaiDang.maNhaTuyenDung FROM NhaTuyenDung " +
+            String sql = "SELECT * FROM NhaTuyenDung " +
                 "inner join BaiDang on NhaTuyenDung.maNhaTuyenDung = BaiDang.maNhaTuyenDung " +
                 "inner join TaiKhoan on TaiKhoan.maTaiKhoan = NhaTuyenDung.maTaiKhoan WHERE diaChi LIKE N'%" + diachi + "%' AND (maNganhNghe = " + maNganhNghe + " AND viTriCongViec LIKE N'%" + vitri + "%'";
             var da = new SqlDataAdapter(sql, conn);
@@ -153,6 +157,16 @@ namespace BAITAPLON_ASPNET.Controllers
             {
                 return "Xảy ra lỗi";
             }
+        }
+        public DataTable SearchPost(int mantd, string vitri)
+        {
+            conn.Open();
+            string sql = "select * from BaiDang where maNhaTuyenDung=" + mantd + " and viTriCongVIec like N'%" + vitri + "%' ";
+            var dtCV = new SqlDataAdapter(sql, conn);
+            var tbCV = new DataTable();
+            dtCV.Fill(tbCV);
+            conn.Close();
+            return tbCV;
         }
     }
 }

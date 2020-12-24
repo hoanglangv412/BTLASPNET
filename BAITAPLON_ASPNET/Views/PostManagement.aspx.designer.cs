@@ -15,22 +15,31 @@ namespace BAITAPLON_ASPNET.Views
     {
 
         /// <summary>
-        /// txtSearch control.
+        /// txtsearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSearch;
+        protected global::System.Web.UI.WebControls.TextBox txtsearch;
 
         /// <summary>
-        /// btSearch control.
+        /// btnsearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btSearch;
+        protected global::System.Web.UI.WebControls.Button btnsearch;
+
+        /// <summary>
+        /// lblalert control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblalert;
 
         /// <summary>
         /// grdpost control.

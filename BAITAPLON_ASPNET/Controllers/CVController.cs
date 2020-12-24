@@ -222,5 +222,16 @@ namespace BAITAPLON_ASPNET.Controllers
             conn.Close();
             return tbCV;
         }
+        public DataTable getthroughDiachiAndVitri(string diachi, string vitri)
+        {
+            conn.Open();
+            String sql = "SELECT * FROM CV " +
+                "WHERE diaChi LIKE N'%" + diachi + "%' AND kyNang LIKE N'%" + vitri + "%'";
+            var da = new SqlDataAdapter(sql, conn);
+            var dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            return dt;
+        }
     }
 }

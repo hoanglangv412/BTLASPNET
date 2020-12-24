@@ -18,7 +18,7 @@ namespace BAITAPLON_ASPNET.Views
             tk = (TaiKhoan)Session["tk"];
             imgavatar.ImageUrl = "~/Photos/" + tk.anh;
             lblmataikhoan.Text = (tk.maTaiKhoan).ToString();
-            lblmatkhau.Text = "**********";
+            lblmatkhau.Text = "*********";
             lbltentaikhoan.Text = tk.tenTaiKhoan;
             iduploadphotos.Visible = false;
             btnok.Visible = false;
@@ -35,7 +35,7 @@ namespace BAITAPLON_ASPNET.Views
                 tkn.anh = tk.anh;
                 lblalert.Text = tkc.editTaiKhoan(tkn);
                 Session["tk"] = tkn;
-                Response.Redirect("AccountDetailView.aspx");
+                //Response.Redirect("AccountDetailView.aspx");
             }
             else
             {
