@@ -31,7 +31,7 @@ namespace BAITAPLON_ASPNET.Controllers
                 c.tieuDe = (string)rd["tieuDe"];
                 c.maTaiKhoan = (int)rd["maTaiKhoan"];
                 c.hoTen = (string)rd["hoTen"];
-                c.ngaySinh = (DateTime)rd["ngaySinh"];
+                c.ngaySinh =(DateTime)rd["ngaySinh"];
                 c.gioiTinh = (string)rd["gioiTinh"];
                 c.diaChi = (string)rd["diaChi"];
                 c.dienThoai = (string)rd["soDienThoai"];
@@ -128,7 +128,7 @@ namespace BAITAPLON_ASPNET.Controllers
 
 
 
-        //Lấy 1 CV
+        //Lấy 1 CV để sửa CV
         public CV get1CV(int maCV)
         {
             conn.Open();
@@ -209,6 +209,18 @@ namespace BAITAPLON_ASPNET.Controllers
 
             conn.Close();
             return fl;
+        }
+
+        // Tìm kiếm CV theo tiêu đề
+        public DataTable SearchCV(int maTaiKhoan, string tieude)
+        {
+            conn.Open();
+            string sql = "select * from CV where maTaiKhoan=" + maTaiKhoan + " and tieuDe like '%"+tieude+"%' ";
+            var dtCV = new SqlDataAdapter(sql, conn);
+            var tbCV = new DataTable();
+            dtCV.Fill(tbCV);
+            conn.Close();
+            return tbCV;
         }
     }
 }

@@ -18,7 +18,7 @@ namespace BAITAPLON_ASPNET.Views
         {
             if(!IsPostBack)
             {
-                txtNgayTao.Text= DateTime.Now.ToString("MM/dd/yyyy");
+                txtNgayTao.Text = DateTime.Now.ToShortDateString();
                 clDate.Visible = false;
             }
         }     
@@ -44,6 +44,7 @@ namespace BAITAPLON_ASPNET.Views
 
         protected void clDate_DayRender(object sender, DayRenderEventArgs e)
         {
+
             if (e.Day.IsOtherMonth)
             {
                 e.Day.IsSelectable = false;

@@ -52,5 +52,19 @@ namespace BAITAPLON_ASPNET.Views
             }
         }
 
+        protected void btSearch_Click(object sender, EventArgs e)
+        {
+            TaiKhoan tk = (TaiKhoan)Session["tk"];
+            if (txtSearch.Text != "")
+            {
+                grdCV.DataSource = dataCV.SearchCV(tk.maTaiKhoan, txtSearch.Text);
+                DataBind();
+               
+            }
+            else
+            {
+                txtSearch.Attributes.Add("placeholder", "Hãy điền thông tin tìm ...");
+            }
+        }
     }
 }

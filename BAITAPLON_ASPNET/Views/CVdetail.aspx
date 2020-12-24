@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         h5,span{
-            color: white;
+            color: black;
         }
         table{
             width: 60%;

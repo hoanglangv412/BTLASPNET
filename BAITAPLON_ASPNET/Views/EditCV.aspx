@@ -30,7 +30,7 @@
                 <td>Ngày sinh: </td>
                 <td><asp:TextBox id="txtNgaySinh" runat="server"></asp:TextBox></td>
                  <td><asp:ImageButton ID="imgbtDate" runat="server" ImageUrl="~/Photos/kaikaikiki.jpg" ImageAlign="AbsBottom" Width="30px" Height="30px" OnClick="imgbtDate_Click"/>
-                     <asp:Calendar ID="clDate" runat="server" Height="260px" Width="280px" OnSelectionChanged="clDate_SelectionChanged" OnDayRender="clDate_DayRender" BackColor="#CC99FF"/>
+                     <asp:Calendar ID="clDate" runat="server" OnSelectionChanged="clDate_SelectionChanged" OnDayRender="clDate_DayRender"/>
                  </td>              
             </tr>
 

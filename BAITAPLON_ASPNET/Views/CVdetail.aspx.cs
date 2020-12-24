@@ -41,7 +41,7 @@ namespace BAITAPLON_ASPNET.Views
             lblgioiTinh.Text = cv.gioiTinh;
             soDienthoai.Text = cv.dienThoai;
             email.Text = cv.email;
-            lblngaysinh.Text = cv.ngaySinh.ToString();
+            lblngaysinh.Text = cv.ngaySinh.ToShortDateString();
             lbltieude.Text = cv.tieuDe;
             lblkinhnghiem.Text = cv.kinhNghiem;
             lblthongtin.Text = cv.thongTinThem;

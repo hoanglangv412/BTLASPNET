@@ -59,10 +59,25 @@ namespace BAITAPLON_ASPNET.Views
         {
             txtNgaySinh.Text = clDate.SelectedDate.ToString("MM/dd/yyyy");
             clDate.Visible = false;
+
         }
 
         protected void clDate_DayRender(object sender, DayRenderEventArgs e)
         {
+            if (clDate.SelectedDate.Year > DateTime.Now.Year)
+            {
+                e.Day.IsSelectable = false;
+            }
+
+            else if( clDate.SelectedDate.Year == DateTime.Now.Year && clDate.SelectedDate.Month > DateTime.Now.Month)
+            {
+                e.Day.IsSelectable = false;
+            }
+            else if (clDate.SelectedDate.Day > DateTime.Now.Day)
+            {
+                e.Day.IsSelectable = false;
+            }
+
             if (e.Day.IsOtherMonth)
             {
                 e.Day.IsSelectable = false;
@@ -96,10 +111,10 @@ namespace BAITAPLON_ASPNET.Views
                 }
 
                 c.anhThe = browserAvatar.FileName;
-                c.ngayTao = DateTime.Parse(DateTime.Now.ToString("MM/dd/yyyy"));
+                c.ngayTao = DateTime.Parse(DateTime.Now.ToShortDateString());
 
                 dataCV.SuaCV(c);
-                EditCV.MessageBox(this,"Sua Thanh Cong");
+                EditCV.MessageBox(this, "Sua Thanh Cong");
             }
             catch (Exception)
             {
