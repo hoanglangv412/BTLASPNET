@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -24,7 +25,10 @@ namespace BTL_ASPNET_WEBGTVL.Views.BaiDang
                 ddlnganhnghe.DataBind();
             }
             TaiKhoan tk = (TaiKhoan)Session["tk"];
-            if(tk == null)
+            dtlbaidang.DataSource = bdc.getBaidang();
+            dtlcv.DataSource = cvc.getCV();
+            DataBind();
+            if (tk == null)
             {
                 dtlbaidang.Visible = true;
                 dtlcv.Visible = false;
@@ -42,9 +46,6 @@ namespace BTL_ASPNET_WEBGTVL.Views.BaiDang
                     dtlcv.Visible = false;
                 }
             }
-            dtlbaidang.DataSource = bdc.getBaidang();
-            dtlcv.DataSource = cvc.getCV();
-            DataBind();
         }
         protected void DDLpositionDataBound(object sender, EventArgs e)
         {
@@ -57,30 +58,59 @@ namespace BTL_ASPNET_WEBGTVL.Views.BaiDang
             {
                 txtsearch.BorderColor = System.Drawing.Color.Black;
                 string diachi = ddldiachi.SelectedValue;
-                int manganhnghe = Convert.ToInt32(ddlnganhnghe.SelectedValue);
+                string manganhnghe = ddlnganhnghe.SelectedValue;
                 string vitri = txtsearch.Text;
-                if(diachi == "Tất cả")
+                if (diachi == "Tất cả")
                 {
-                    dtlbaidang.DataSource = bdc.getthroughDiachiandNganhNghe("",manganhnghe, vitri);
+                    dtlbaidang.DataSource = bdc.getthroughDiachiandNganhNghe("",manganhnghe+")", vitri);
                     DataBind();
                 }
-                if(manganhnghe == 0)
+                if(manganhnghe == "0")
                 {
-                    dtlbaidang.DataSource = bdc.getthroughDiachiandNganhNghe(diachi,0, vitri);
+                    dtlbaidang.DataSource = bdc.getthroughDiachiandNganhNghe(diachi,"0 OR maNganhNghe > 0)", vitri);
                     DataBind();
                 }
-                if(diachi == "Tất cả" && manganhnghe == 0)
+                if(diachi == "Tất cả" && manganhnghe == "0")
                 {
-                    dtlbaidang.DataSource = bdc.getthroughDiachiandNganhNghe("", 0, vitri);
+                    dtlbaidang.DataSource = bdc.getthroughDiachiandNganhNghe("", "0 OR maNganhNghe > 0)", vitri);
                     DataBind();
                 }
-                dtlbaidang.DataSource = bdc.getthroughDiachiandNganhNghe(diachi,manganhnghe, vitri);
-                DataBind();
+                if (diachi != "Tất cả" && manganhnghe != "0")
+                {
+                    dtlbaidang.DataSource = bdc.getthroughDiachiandNganhNghe(diachi, manganhnghe + ")", vitri);
+                    DataBind();
+                }
             }
             else
             {
-                txtsearch.Attributes.Add("placeholder", "Hãy điền tên công việc cần tìm.");
-                txtsearch.BorderColor = System.Drawing.Color.Red;
+                string diachi = ddldiachi.SelectedValue;
+                string manganhnghe = ddlnganhnghe.SelectedValue;
+                if (diachi == "Tất cả")
+                {
+                    dtlbaidang.DataSource = bdc.getthroughDiachiandNganhNghe("", manganhnghe + ")", "");
+                    DataBind();
+                }
+                if (manganhnghe == "0")
+                {
+                    dtlbaidang.DataSource = bdc.getthroughDiachiandNganhNghe(diachi, "0 OR maNganhNghe > 0)","");
+                    DataBind();
+                }
+                if (diachi == "Tất cả" && manganhnghe == "0")
+                {
+                    dtlbaidang.DataSource = bdc.getthroughDiachiandNganhNghe("", "0 OR maNganhNghe > 0)","");
+                    DataBind();
+                }
+                if(diachi != "Tất cả" && manganhnghe != "0")
+                {
+                    dtlbaidang.DataSource = bdc.getthroughDiachiandNganhNghe(diachi, manganhnghe + ")", "");
+                    DataBind();
+                }
+            }
+            lblalert.Visible = false;
+            if (dtlbaidang.Items.Count == 0)
+            {
+                lblalert.Visible = true;
+                lblalert.Text = "Không có công việc cần tìm";
             }
         }
     }

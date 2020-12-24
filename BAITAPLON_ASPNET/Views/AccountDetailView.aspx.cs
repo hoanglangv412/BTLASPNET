@@ -31,14 +31,15 @@ namespace BAITAPLON_ASPNET.Views
                 tkn.maTaiKhoan = tk.maTaiKhoan;
                 tkn.tenTaiKhoan = tk.tenTaiKhoan;
                 tkn.matKhau = txtnewmatkhau.Text;
+                tkn.loaiTaiKhoan = tk.loaiTaiKhoan;
                 tkn.anh = tk.anh;
                 lblalert.Text = tkc.editTaiKhoan(tkn);
                 Session["tk"] = tkn;
-                Response.Redirect("TaiKhoanDetailView.aspx");
+                Response.Redirect("AccountDetailView.aspx");
             }
             else
             {
-                lblalert.Text = "Như Cứt";
+                lblalert.Text = "Sai mật khẩu";
             }
         }
         protected void btnchangephoto_Click(object sender, EventArgs e)
@@ -57,10 +58,11 @@ namespace BAITAPLON_ASPNET.Views
             tkn.maTaiKhoan = tk.maTaiKhoan;
             tkn.tenTaiKhoan = tk.tenTaiKhoan;
             tkn.matKhau = tk.matKhau;
+            tkn.loaiTaiKhoan = tk.loaiTaiKhoan;
             tkn.anh = iduploadphotos.FileName;
             lblalert.Text = tkc.editTaiKhoan(tkn);
             Session["tk"] = tkn;
-            Response.Redirect("TaiKhoanDetailView.aspx");
+            Response.Redirect("AccountDetailView.aspx");
         }
     }
 }

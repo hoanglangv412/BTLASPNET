@@ -2,7 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         td{
-            width:27%;
+            border: 1px solid black;
+            width:30%;
         }
         table{
             margin: 0 auto;
@@ -14,7 +15,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:DataList ID="ddlcongty" runat="server" DataKeyField="maNhaTuyenDung" RepeatColumns="4" CssClass="table table-striped table-dark" Width="90%">
+    <asp:DataList ID="ddlcongty" runat="server" DataKeyField="maNhaTuyenDung" RepeatColumns="3" CssClass="table table-striped table-dark" Width="90%">
         <ItemTemplate>
             <asp:Image ID="Image2" runat="server" ImageUrl='<%#"~/Photos/" + Eval("anh") %>' Width="150px" Height="100px"/>
             <div class="divinfo">
@@ -23,9 +24,6 @@
                 <br />
                 Tên nhà tuyển dụng: 
                 <asp:Label ID="tenNhaTuyenDungLabel" runat="server" Text='<%# Eval("tenNhaTuyenDung") %>' />
-                <br />
-                Mã tài khoản: 
-                <asp:Label ID="maTaiKhoanLabel" runat="server" Text='<%# Eval("maTaiKhoan") %>' />
                 <br />
                 Giới thiệu: 
                 <asp:Label ID="gioiThieuLabel" runat="server" Text='<%# Eval("gioiThieu") %>' />

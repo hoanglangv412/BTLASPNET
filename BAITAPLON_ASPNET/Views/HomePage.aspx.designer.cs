@@ -51,6 +51,15 @@ namespace BTL_ASPNET_WEBGTVL.Views.BaiDang
         protected global::System.Web.UI.WebControls.Button btnsearch;
 
         /// <summary>
+        /// lblalert control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblalert;
+
+        /// <summary>
         /// dtlbaidang control.
         /// </summary>
         /// <remarks>

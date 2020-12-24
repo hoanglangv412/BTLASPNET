@@ -84,9 +84,8 @@
             </asp:TableCell></asp:TableRow><asp:TableRow>
             <asp:TableCell ColumnSpan="3" CssClass="tdborderinfo">
                 <asp:Label runat="server" ID="lblthongtin"/>
-            </asp:TableCell></asp:TableRow></asp:Table>
-    <div class="grpbtn">
-        <asp:Button runat="server" ID="btnduyet" Text="Duyệt" OnClick="btnduyet_Click" CssClass="btn btn-success"/>
+            </asp:TableCell></asp:TableRow></asp:Table><div class="grpbtn">
+        <asp:Button runat="server" ID="btnback" Text="Trở về" CssClass="btn btn-dark" OnClick="btnback_Click"/><asp:Button runat="server" ID="btnduyet" Text="Duyệt" OnClick="btnduyet_Click" CssClass="btn btn-success"/>
         <asp:Button runat="server" ID="btnhuy" Text="Hủy" OnClick="btnhuy_Click" CssClass="btn btn-danger"/>
     </div>
 </asp:Content>

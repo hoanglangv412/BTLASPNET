@@ -2,6 +2,7 @@
 using BAITAPLON_ASPNET.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -30,9 +31,22 @@ namespace BAITAPLON_ASPNET.Views
             lbldiachi.Text = bd.diaChi;
             DataList1.Visible = false;
             TaiKhoan tk = (TaiKhoan)Session["tk"];
-            if(tk.loaiTaiKhoan == 1)
+            if(tk == null)
             {
                 btnApply.Visible = false;
+                btnshowappliedCV.Visible = false;
+            }
+            else
+            {
+                if (tk.loaiTaiKhoan == 1)
+                {
+                    btnApply.Visible = false;
+                    btnshowappliedCV.Visible = true;
+                }
+                else
+                {
+                    btnshowappliedCV.Visible = false;
+                }
             }
         }
         protected void btnApply_Click(object sender, EventArgs e)
@@ -74,6 +88,25 @@ namespace BAITAPLON_ASPNET.Views
                     Response.Write("<script>alert('CV này bạn đã apply rồi.')</script>");
                 }
             }
+        }
+        protected void btnshowappliedCV_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(Request.QueryString["maBaiDang"]);
+            tblDetail.Visible = true;
+            DataTable dt = utc.getUngtuyen(id);
+            if (dt != null)
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    lbltitle.Text = "Danh sách CV đã ứng tuyển";
+                    grdUngtuyen.DataSource = dt;
+                }
+                else
+                {
+                    lblalert.Text = "Danh sách trống";
+                }
+            }
+            DataBind();
         }
     }
 }

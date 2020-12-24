@@ -132,6 +132,15 @@ namespace BAITAPLON_ASPNET.Views
         protected global::System.Web.UI.WebControls.Label lblthongtin;
 
         /// <summary>
+        /// btnback control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnback;
+
+        /// <summary>
         /// btnduyet control.
         /// </summary>
         /// <remarks>

@@ -75,12 +75,12 @@ namespace BAITAPLON_ASPNET.Controllers
             conn.Close();
             return bd;
         }
-        public DataTable getthroughDiachiandNganhNghe(string diachi,int maNganhNghe,string vitri)
+        public DataTable getthroughDiachiandNganhNghe(string diachi,string maNganhNghe,string vitri)
         {
             conn.Open();
             String sql = "SELECT maBaiDang,tenNhaTuyenDung,tieuDe,viTriCongViec,anh,mucLuong,BaiDang.maNhaTuyenDung FROM NhaTuyenDung " +
                 "inner join BaiDang on NhaTuyenDung.maNhaTuyenDung = BaiDang.maNhaTuyenDung " +
-                "inner join TaiKhoan on TaiKhoan.maTaiKhoan = NhaTuyenDung.maTaiKhoan WHERE diaChi = '" + diachi + "' OR maNganhNghe = " + maNganhNghe + " OR viTriCongViec LIKE '%" + vitri + "%'";
+                "inner join TaiKhoan on TaiKhoan.maTaiKhoan = NhaTuyenDung.maTaiKhoan WHERE diaChi LIKE N'%" + diachi + "%' AND (maNganhNghe = " + maNganhNghe + " AND viTriCongViec LIKE N'%" + vitri + "%'";
             var da = new SqlDataAdapter(sql, conn);
             var dt = new DataTable();
             da.Fill(dt);

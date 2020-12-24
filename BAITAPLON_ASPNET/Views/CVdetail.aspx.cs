@@ -28,6 +28,14 @@ namespace BAITAPLON_ASPNET.Views
             {
                 btnhuy.Visible = true;
             }
+            if (Request.QueryString["mabd"] != null)
+            {
+                btnback.Visible = true;
+            }
+            else
+            {
+                btnback.Visible = false;
+            }
         }
 
         private void hienthi()
@@ -55,7 +63,7 @@ namespace BAITAPLON_ASPNET.Views
             int mabd = Convert.ToInt32(Request.QueryString["mabd"]);
 
             utc.updUngTuyen(macv,mabd,1);
-            Response.Redirect("PostManagement.aspx");
+            Response.Redirect("CVdetail.aspx?macv="+macv+"&mabd="+mabd+"&duyet=True");
         }
         protected void btnhuy_Click(object sender, EventArgs e)
         {
@@ -63,7 +71,13 @@ namespace BAITAPLON_ASPNET.Views
             int mabd = Convert.ToInt32(Request.QueryString["mabd"]);
 
             utc.updUngTuyen(macv, mabd, 0);
-            Response.Redirect("PostManagement.aspx");
+            Response.Redirect("CVdetail.aspx?macv=" + macv + "&mabd=" + mabd + "&duyet=False");
+        }
+
+        protected void btnback_Click(object sender, EventArgs e)
+        {
+            int mabd = Convert.ToInt32(Request.QueryString["mabd"]);
+            Response.Redirect("PostDetail.aspx?maBaiDang=" + mabd + "");
         }
     }
 }

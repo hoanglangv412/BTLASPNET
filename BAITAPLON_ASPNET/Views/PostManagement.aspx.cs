@@ -2,6 +2,7 @@
 using BAITAPLON_ASPNET.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -15,7 +16,6 @@ namespace BAITAPLON_ASPNET.Views
         UngTuyenController utc = new UngTuyenController();
         protected void Page_Load(object sender, EventArgs e)
         {
-            lbltitle.Visible = false;
             if (!IsPostBack)
             {
                 hienthi();
@@ -46,21 +46,7 @@ namespace BAITAPLON_ASPNET.Views
                 Response.Redirect("EditPost.aspx");
             }
         }
-        protected void btnshowdetail_Click(object sender, CommandEventArgs e)
-        {
-            if (e.CommandName == "detail")
-            {
-                List<BaiDang> lstbd = new List<BaiDang>();
-                BaiDang bd = bdc.getMotBaidang(Convert.ToInt32(e.CommandArgument));
-                lstbd.Add(bd);
-                grdpost.DataSource = lstbd;
-                grdUngtuyen.DataSource = utc.getUngtuyen(Convert.ToInt32(e.CommandArgument.ToString()));
-                lbltitle.Visible = true;
-                lbltitle.Text = "Danh sách CV đã ứng tuyển";
-                DataBind();
-            }
-        }
-        protected void btnduyet_Click(object sender, CommandEventArgs e)
+        protected void btSearchClick(object sender, CommandEventArgs e)
         {
             
         }
