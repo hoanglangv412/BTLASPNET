@@ -46,5 +46,19 @@ namespace BAITAPLON_ASPNET.Controllers
                 return "That Bai";
             }
         }
+        public int getmantd(int mtk)
+        {
+            conn.Open();
+            string path = "SELECT maNhaTuyenDung FROM NhaTuyenDung WHERE maTaiKhoan = "+mtk+"";
+            int mantd = 0;
+            var cmd = new SqlCommand(path, conn);
+            var rd = cmd.ExecuteReader();
+            if (rd.Read())
+            {
+                mantd = (int)rd["maNhaTuyenDung"];
+            }
+            conn.Close();
+            return mantd;
+        }
     }
 }

@@ -1,12 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.DataVisualization.Charting;
 using System.Web.UI.WebControls;
 using BAITAPLON_ASPNET.Controllers;
 using BAITAPLON_ASPNET.Models;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.Windows;
+//using Syncfusion.Pdf;
+//using Syncfusion.Pdf.Parsing;
+//using Syncfusion.Pdf.Graphics;
+//using Syncfusion.GridHelperClasses;
+//using System.Drawing;
 
 namespace BTL_ASPNET_WEBGTVL.Views.BaiDang
 {
@@ -19,6 +30,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.BaiDang
         {
             if (!IsPostBack)
             {
+                loadChart();
                 ddlnganhnghe.DataSource = nnc.getNganhNghe();
                 ddlnganhnghe.DataTextField = "TenNganhNghe";
                 ddlnganhnghe.DataValueField = "maNganhNghe";
@@ -33,6 +45,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.BaiDang
                 dtlbaidang.Visible = true;
                 dtlcv.Visible = false;
                 ddlnganhnghe.Visible = true;
+                tblreport.Visible = false;
             }
             if (tk != null)
             {
@@ -41,19 +54,27 @@ namespace BTL_ASPNET_WEBGTVL.Views.BaiDang
                     dtlcv.Visible = true;
                     dtlbaidang.Visible = false;
                     ddlnganhnghe.Visible = false;
+                    tblreport.Visible = false;
+                }
+                if(tk.loaiTaiKhoan == 0)
+                {
+                    dtlbaidang.Visible = false;
+                    dtlcv.Visible = false;
+                    tblreport.Visible = true;
                 }
                 if (tk.loaiTaiKhoan == 2)
                 {
                     dtlbaidang.Visible = true;
                     dtlcv.Visible = false;
                     ddlnganhnghe.Visible = true;
+                    tblreport.Visible = false;
                 }
             }
         }
         protected void DDLpositionDataBound(object sender, EventArgs e)
         {
             if (!IsPostBack)
-                ddlnganhnghe.Items.Insert(0, new ListItem("Tất cả ngành nghề", "0"));
+                ddlnganhnghe.Items.Insert(0, new System.Web.UI.WebControls.ListItem("Tất cả ngành nghề", "0"));
         }
         protected void btnsearch_Click(object sender, EventArgs e)
         {
@@ -211,6 +232,31 @@ namespace BTL_ASPNET_WEBGTVL.Views.BaiDang
                 }
             }
             DataBind();
+        }
+
+        protected void loadChart()
+        {
+            online.Text = (Application["Online"]).ToString();
+            accesscount.Text = (Application["Access"]).ToString();
+            grd.DataSource = bdc.CountPost();
+            gridCV.DataSource = cvc.CountCV();
+            grd.Visible = false;
+            gridCV.Visible = false;
+            DataBind();
+            Chart1.Titles.Add("Số lượng bài đăng của các nhà tuyển dụng");
+            Chart1.Legends.Add("Số lượng bài đăng");
+            foreach (GridViewRow row in grd.Rows)
+            {
+                Chart1.Series["Số lượng bài đăng"].Points.AddXY(row.Cells[0].Text, row.Cells[1].Text);
+                Chart1.Series["Số lượng bài đăng"].Points[row.RowIndex].Label = row.Cells[1].Text;
+            }
+            Chart2.Titles.Add("Số lượng CV của các tài khoản");
+            Chart2.Legends.Add("Số lượng CV");
+            foreach (GridViewRow row in gridCV.Rows)
+            {
+                Chart2.Series["Số lượng CV"].Points.AddXY(row.Cells[0].Text, row.Cells[1].Text);
+                Chart2.Series["Số lượng CV"].Points[row.RowIndex].Label = row.Cells[1].Text;
+            }
         }
     }
 }

@@ -31,7 +31,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:Table runat="server" ID="tbltaikhoan">
+    <asp:Table runat="server" ID="tbltaikhoan" CssClass="table table-dark table-sm">
         <asp:TableRow>
             <asp:TableHeaderCell ColumnSpan="2">
                 <%--anh--%>
@@ -55,7 +55,7 @@
                   <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left:100px">
                     <span>Đổi mật khẩu</span>
                   </button>
-                  <div class="dropdown-menu">
+                  <div class="dropdown-menu" style="background-color:#545b62;color:white; padding-left:30px">
                     Nhập mật khẩu cũ: <asp:TextBox ID="txtoldpassword" runat="server" TextMode="Password"/><br />
                     Nhập mật khẩu mới: <asp:TextBox ID="txtnewmatkhau" runat="server" TextMode="Password"/><br />
                     Nhập lại mật khẩu mới: <asp:TextBox ID="txtnewmatkhau2" runat="server" TextMode="Password"/>

@@ -168,5 +168,17 @@ namespace BAITAPLON_ASPNET.Controllers
             conn.Close();
             return tbCV;
         }
+        public DataTable CountPost()
+        {
+            conn.Open();
+            string sql = "SELECT tenNhaTuyenDung,COUNT(maBaiDang) AS soluongbaidang FROM BaiDang " +
+                "inner join NhaTuyenDung ON BaiDang.maNhaTuyenDung = NhaTuyenDung.maNhaTuyenDung " +
+                "GROUP BY tenNhaTuyenDung";
+            var da = new SqlDataAdapter(sql, conn);
+            var dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            return dt;
+        }
     }
 }

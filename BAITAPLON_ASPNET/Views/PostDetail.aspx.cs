@@ -15,6 +15,7 @@ namespace BAITAPLON_ASPNET.Views
         CVController cvc = new CVController();
         BaiDangController bdc = new BaiDangController();
         UngTuyenController utc = new UngTuyenController();
+        NhaTuyenDungController ntdc = new NhaTuyenDungController();
         protected void Page_Load(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(Request.QueryString["maBaiDang"]);
@@ -25,8 +26,8 @@ namespace BAITAPLON_ASPNET.Views
             lbltieude.Text = bd.tieuDe;
             lblvitri.Text = bd.viTriCongViec;
             lblmann.Text = bd.maNganhNghe.ToString();
+            lblml.Text = bd.mucLuong.ToString("0000,0 đ");
             lblslt.Text = bd.soLuongTuyen.ToString();
-            lblml.Text = bd.mucLuong.ToString();
             lblsdt.Text = bd.soDienThoai;
             lbldiachi.Text = bd.diaChi;
             DataList1.Visible = false;
@@ -38,13 +39,27 @@ namespace BAITAPLON_ASPNET.Views
             }
             else
             {
+                int mantd = ntdc.getmantd(tk.maTaiKhoan);
                 if (tk.loaiTaiKhoan == 1)
                 {
                     btnApply.Visible = false;
-                    btnshowappliedCV.Visible = true;
+                    if (mantd == bd.maNhaTuyenDung)
+                    {
+                        btnshowappliedCV.Visible = true;
+                    }
+                    else
+                    {
+                        btnshowappliedCV.Visible = false;
+                    }
+                }
+                else if(tk.loaiTaiKhoan == 0)
+                {
+                    btnApply.Visible = false;
+                    btnshowappliedCV.Visible = false;
                 }
                 else
                 {
+                    btnApply.Visible = true;
                     btnshowappliedCV.Visible = false;
                 }
             }

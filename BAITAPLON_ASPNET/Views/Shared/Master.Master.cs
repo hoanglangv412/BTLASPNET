@@ -24,6 +24,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
                 licv.Visible = false;
                 litindang.Visible = false;
                 linguoidung.Visible = false;
+                licongty.Visible = true;
             }
             else
             {
@@ -37,6 +38,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
                     linguoidung.Visible = true;
                     litindang.Visible = false;
                     licv.Visible = false;
+                    licongty.Visible = false;
                 }
                 if (tk.loaiTaiKhoan == 1)
                 {
@@ -44,6 +46,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
                     litindang.Visible = true;
                     linguoidung.Visible = false;
                     licv.Visible = false;
+                    licongty.Visible = true;
                 }
                 if (tk.loaiTaiKhoan == 2)
                 {
@@ -51,6 +54,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
                     licv.Visible = true;
                     litindang.Visible = false;
                     linguoidung.Visible = false;
+                    licongty.Visible = true;
                 }
             }
         }
@@ -63,7 +67,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
             {
                 tk = tkc.getTaiKhoan(TaiKhoan);
                 Session["tk"] = tk;
-                Page_Load(sender, e);
+                Response.Redirect("HomePage.aspx");
             }
             if (tkc.checkTaiKhoan(TaiKhoan, MatKhau) == 1)
             {
@@ -76,7 +80,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
             {
                 tk = tkc.getTaiKhoan(TaiKhoan);
                 Session["tk"] = tk;
-                Page_Load(sender, e);
+                Response.Redirect("HomePage.aspx");
             }
             if (tkc.checkTaiKhoan(TaiKhoan, MatKhau) == 3)
             {

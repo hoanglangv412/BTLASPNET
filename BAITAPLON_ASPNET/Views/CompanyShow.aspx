@@ -39,11 +39,11 @@
         <asp:DataList ID="dtlbaidang" runat="server" DataKeyField="maBaiDang" RepeatColumns="3" Width="90%" CssClass="table table-dark table-sm">
         <ItemTemplate>
             <%--<div class="cell-content">--%>
-                <asp:Table ID="tblbaidang" runat="server" Width="400px" CssClass="tableBaiDang">
+                <asp:Table ID="tblbaidang" runat="server" Width="100%" CssClass="tableBaiDang">
                     <asp:TableRow>
-                        <asp:TableCell RowSpan="3" Width="40%"><asp:Image ID="imgLogo" Width="150px" Height="100px" runat="server" ImageUrl='<%#"~/Photos/" + Eval("anh") %>'/></asp:TableCell>
-                        <asp:TableCell Width="20%">Vị trí:</asp:TableCell>
-                        <asp:TableCell Width="40%"><asp:Label ID="Label1" runat="server" Text='<%# Eval("viTriCongVIec") %>'/></asp:TableCell>
+                        <asp:TableCell RowSpan="3" Width="20%"><asp:Image ID="imgLogo" Width="150px" Height="150px" runat="server" ImageUrl='<%#"~/Photos/" + Eval("anh") %>'/></asp:TableCell>
+                        <asp:TableCell Width="30%">Vị trí:</asp:TableCell>
+                        <asp:TableCell Width="50%"><asp:Label ID="Label1" runat="server" Text='<%# Eval("viTriCongVIec") %>'/></asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>Công ty:</asp:TableCell>
@@ -56,11 +56,11 @@
                               <path d="M13 4a2 2 0 0 0 2 2V4h-2zM3 4a2 2 0 0 1-2 2V4h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 12a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
                             </svg>
                         </asp:TableCell>
-                        <asp:TableCell><asp:Label ID="Label3" runat="server" Text='<%# Eval("mucLuong") %>'/></asp:TableCell>
+                        <asp:TableCell><asp:Label ID="Label3" runat="server" Text='<%#  string.Format("{0:0000,0 đ}",Eval("mucLuong"))  %>'/></asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell ColumnSpan="3" CssClass="cell-lastcell" Width="100%">
-                            <a href="PostDetail.aspx?maBaiDang=<%#Eval("maBaiDang")%>">Chi tiết</a> 
+                            <a href="PostDetail.aspx?maBaiDang=<%#Eval("maBaiDang")%>">Chi tiết</a>
                         </asp:TableCell>
                     </asp:TableRow>
                 </asp:Table>
