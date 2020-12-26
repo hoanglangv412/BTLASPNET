@@ -35,7 +35,10 @@
         </asp:TableRow>
         <asp:TableRow>
             <asp:TableCell>Vị trí công việc: </asp:TableCell>
-            <asp:TableCell><asp:TextBox runat="server" ID="txtvitri" /></asp:TableCell>
+            <asp:TableCell><asp:TextBox runat="server" ID="txtvitri" />
+                                <asp:RequiredFieldValidator ID="rtxtvitri" ControlToValidate="txtvitri" ErrorMessage="Bạn chưa nhập vị trí công việc" ForeColor="red" runat="server"/>
+
+            </asp:TableCell>
         </asp:TableRow>
         <asp:TableRow>
             <asp:TableCell>Mã ngành nghề: </asp:TableCell>
@@ -43,19 +46,30 @@
         </asp:TableRow>
         <asp:TableRow>
             <asp:TableCell>Mô tả: </asp:TableCell>
-            <asp:TableCell><asp:TextBox  runat="server" ID="txtmota" /></asp:TableCell>
+            <asp:TableCell><asp:TextBox  runat="server" ID="txtmota" />
+                                <asp:RequiredFieldValidator ID="rtxtmota" ControlToValidate="txtmota" ErrorMessage="Bạn chưa nhập mô tả công việc" ForeColor="red" runat="server"/>
+            </asp:TableCell>
         </asp:TableRow>
         <asp:TableRow>
             <asp:TableCell>Số lượng tuyển: </asp:TableCell>
-            <asp:TableCell><asp:TextBox  runat="server" ID="txtsoluongtuyen" /></asp:TableCell>
+            <asp:TableCell><asp:TextBox  runat="server" ID="txtsoluongtuyen" />
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ControlToValidate="txtsoluongtuyen" ValidationExpression="^\d+$" ErrorMessage="Sai định dạng" ForeColor="Red" runat="server" />
+
+            </asp:TableCell>
         </asp:TableRow>
         <asp:TableRow>
             <asp:TableCell>Mức lương: </asp:TableCell>
-            <asp:TableCell><asp:TextBox  runat="server" ID="txtmucluong" /></asp:TableCell>
+            <asp:TableCell><asp:TextBox  runat="server" ID="txtmucluong" />
+                                <asp:RegularExpressionValidator ID="rml" ControlToValidate="txtmucluong" ValidationExpression="^\d+$" ErrorMessage="Sai định dạng" ForeColor="Red" runat="server" />
+
+            </asp:TableCell>
         </asp:TableRow>
         <asp:TableRow>
             <asp:TableCell>Số điện thoại: </asp:TableCell>
-            <asp:TableCell><asp:TextBox  runat="server" ID="txtsodienthoai" /></asp:TableCell>
+            <asp:TableCell><asp:TextBox  runat="server" ID="txtsodienthoai" />
+                                <asp:RegularExpressionValidator ID="rsdt" ControlToValidate="txtsodienthoai" ValidationExpression="\d{10}" ErrorMessage="Số điện là 10 số" ForeColor="Red" runat="server" />
+
+            </asp:TableCell>
         </asp:TableRow>
         <asp:TableRow>
             <asp:TableCell>Địa chỉ: </asp:TableCell>

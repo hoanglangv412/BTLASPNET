@@ -93,7 +93,9 @@
                       </div>
                       <div class="modal-body">
                         <p class="text-xl-left">Tài khoản: </p><asp:TextBox ID="txttaikhoandk" runat="server" /><br />
+<%--                        <asp:RequiredFieldValidator ID="rtaikhoandk" ControlToValidate="txttaikhoandk" ErrorMessage="Bạn chưa nhập tài khoản" ForeColor="red" runat="server"/>--%>
                         <p class="text-xl-left"> Mật khẩu: </p><asp:TextBox ID="txtmatkhaudk" runat="server" TextMode="Password"/><br />
+<%--                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtmatkhaudk" ErrorMessage="Bạn chưa nhập mật khẩu" ForeColor="red" runat="server"/>--%>
                         <p class="text-xl-left">Xác nhận: </p><asp:TextBox ID="txtxnmatkhau" runat="server" TextMode="Password"/><br />
                         <p class="text-xl-left">Ảnh: </p><asp:TextBox ID="txtanhdk" runat="server"/>
                         <p class="text-xl-left">Bạn là: </p>

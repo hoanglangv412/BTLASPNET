@@ -26,6 +26,20 @@ namespace BAITAPLON_ASPNET.Controllers
             conn.Close();
             return dt;
         }
+        public int getCongTy(string tenNhaTuyenDung)
+        {
+            conn.Open();
+            int flag = 0;
+            string path = "SELECT * FROM NhaTuyenDung WHERE tenNhaTuyenDung = '"+tenNhaTuyenDung+"'";
+            var cmd = new SqlCommand(path, conn);
+            var rd = cmd.ExecuteReader();
+            if (rd.Read())
+            {
+                flag = 1;
+            }
+            conn.Close();
+            return flag;
+        }
         public string addNhaTuyenDung(NhaTuyenDung ntd)
         {
             try

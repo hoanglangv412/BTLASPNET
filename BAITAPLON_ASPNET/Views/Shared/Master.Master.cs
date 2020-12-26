@@ -57,35 +57,51 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
                     licongty.Visible = true;
                 }
             }
+            if (!IsPostBack)
+            {
+                if (btnlogin.Visible == true && btnsignin.Visible == true)
+                {
+                    Session.Abandon();
+                }
+            }
         }
         protected void btnmodallogin_Click(object sender, EventArgs e)
         {
             string TaiKhoan = txttaikhoan.Text;
             string MatKhau = txtmatkhau.Text;
+            string alert = "";
             TaiKhoan tk = new TaiKhoan();
-            if (tkc.checkTaiKhoan(TaiKhoan, MatKhau) == 0)
+            if(TaiKhoan == "" && MatKhau == "")
             {
-                tk = tkc.getTaiKhoan(TaiKhoan);
-                Session["tk"] = tk;
-                Response.Redirect("HomePage.aspx");
+                alert = "Bạn chưa nhập tài khoản hoặc mật khẩu.";   
             }
-            if (tkc.checkTaiKhoan(TaiKhoan, MatKhau) == 1)
+            else
             {
-                tk = tkc.getTaiKhoan(TaiKhoan);
-                Session["tk"] = tk;
-                //Page_Load(sender, e);
-                Response.Redirect("HomePage.aspx");
+                if (tkc.checkTaiKhoan(TaiKhoan, MatKhau) == 3)
+                {
+                    alert = "Sai tài khoản, mật khẩu.";
+                }
+                if (tkc.checkTaiKhoan(TaiKhoan, MatKhau) == 0)
+                {
+                    tk = tkc.getTaiKhoan(TaiKhoan);
+                    Session["tk"] = tk;
+                    Response.Redirect("HomePage.aspx");
+                }
+                if (tkc.checkTaiKhoan(TaiKhoan, MatKhau) == 1)
+                {
+                    tk = tkc.getTaiKhoan(TaiKhoan);
+                    Session["tk"] = tk;
+                    //Page_Load(sender, e);
+                    Response.Redirect("HomePage.aspx");
+                }
+                if (tkc.checkTaiKhoan(TaiKhoan, MatKhau) == 2)
+                {
+                    tk = tkc.getTaiKhoan(TaiKhoan);
+                    Session["tk"] = tk;
+                    Response.Redirect("HomePage.aspx");
+                }
             }
-            if (tkc.checkTaiKhoan(TaiKhoan, MatKhau) == 2)
-            {
-                tk = tkc.getTaiKhoan(TaiKhoan);
-                Session["tk"] = tk;
-                Response.Redirect("HomePage.aspx");
-            }
-            if (tkc.checkTaiKhoan(TaiKhoan, MatKhau) == 3)
-            {
-                Response.Write("<script>alert('Sai tài khoản, mật khẩu.')</script>");
-            }
+            Response.Write("<script>alert('"+alert+"')</script>");
         }
         protected void btnmodalsignin_Click(object sender, EventArgs e)
         {
@@ -94,44 +110,63 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
             string matkhau = txtmatkhaudk.Text;
             string anh = txtanhdk.Text;
             int loaitaikhoan = 3;
-            if (rbadmin.Checked)
+            if (taikhoan == "" && matkhau == "")
             {
-                loaitaikhoan = 0;
+                alert = "Bạn chưa nhập tài khoản hoặc mật khẩu.";
             }
-            if (rbntd.Checked)
-            {
-                loaitaikhoan = 1;
-                txttennhatuyendung.Visible = true;
-                txtgioithieu.Visible = true;
-            }
-            if (rbnd.Checked)
-            {
-                loaitaikhoan = 2;
-                
-            }
-            TaiKhoan tk = new TaiKhoan();
-            tk.tenTaiKhoan = taikhoan;
-            tk.matKhau = matkhau;
-            tk.loaiTaiKhoan = loaitaikhoan;
-            tk.anh = anh;
-            if (txtmatkhaudk.Text == txtxnmatkhau.Text && loaitaikhoan != 3)
-            {
-                alert = tkc.addTaiKhoan(tk) + ",mời đăng nhập lại.";
-                if (loaitaikhoan == 1)
+            else {
+                if (rbadmin.Checked)
                 {
-                    List<TaiKhoan> lsttk = tkc.getTaiKhoan();
-                    TaiKhoan tklast = lsttk.LastOrDefault();
-                    NhaTuyenDung ntd = new NhaTuyenDung();
-                    ntd.tenNhaTuyenDung = txttennhatuyendung.Text;
-                    ntd.maTaiKhoan = tklast.maTaiKhoan;
-                    ntd.logo = tklast.anh;
-                    ntd.gioithieu = txtgioithieu.Text;
-                    alert = ntdc.addNhaTuyenDung(ntd);
+                    loaitaikhoan = 0;
                 }
-            }
-            else
-            {
-                alert = "Tài khoản, mật khẩu không hợp lệ";
+                if (rbntd.Checked)
+                {
+                    loaitaikhoan = 1;
+                    txttennhatuyendung.Visible = true;
+                    txtgioithieu.Visible = true;
+                }
+                if (rbnd.Checked)
+                {
+                    loaitaikhoan = 2;
+                }
+                TaiKhoan tk = new TaiKhoan();
+                if (!taikhoan.Equals(tkc.getTaiKhoan(taikhoan).tenTaiKhoan, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    tk.tenTaiKhoan = taikhoan;
+                    tk.matKhau = matkhau;
+                    tk.loaiTaiKhoan = loaitaikhoan;
+                    tk.anh = anh;
+                    if (txtmatkhaudk.Text == txtxnmatkhau.Text && loaitaikhoan != 3)
+                    {
+                        alert = tkc.addTaiKhoan(tk) + ",mời đăng nhập lại.";
+                        if (loaitaikhoan == 1)
+                        {
+                            List<TaiKhoan> lsttk = tkc.getTaiKhoan();
+                            TaiKhoan tklast = lsttk.LastOrDefault();
+                            NhaTuyenDung ntd = new NhaTuyenDung();
+                            if (ntdc.getCongTy(txttennhatuyendung.Text) == 0)
+                            {
+                                ntd.tenNhaTuyenDung = txttennhatuyendung.Text;
+                                ntd.maTaiKhoan = tklast.maTaiKhoan;
+                                ntd.logo = tklast.anh;
+                                ntd.gioithieu = txtgioithieu.Text;
+                                alert = ntdc.addNhaTuyenDung(ntd);
+                            }
+                            else
+                            {
+                                alert = "Tên nhà tuyển dụng đã tồn tại.";
+                            }
+                        }
+                    }
+                    else
+                    {
+                        alert = "Tài khoản, mật khẩu không hợp lệ";
+                    }
+                }
+                else
+                {
+                    alert = "Tài khoản đã tồn tại.";
+                }
             }
             Response.Write("<script>alert('" + alert + "')</script>");
         }

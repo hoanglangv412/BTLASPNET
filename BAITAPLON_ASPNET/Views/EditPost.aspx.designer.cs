@@ -60,6 +60,15 @@ namespace BAITAPLON_ASPNET.Views
         protected global::System.Web.UI.WebControls.TextBox txtvitri;
 
         /// <summary>
+        /// rtxtvitri control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rtxtvitri;
+
+        /// <summary>
         /// ddlnganhnghe control.
         /// </summary>
         /// <remarks>
@@ -78,6 +87,15 @@ namespace BAITAPLON_ASPNET.Views
         protected global::System.Web.UI.WebControls.TextBox txtmota;
 
         /// <summary>
+        /// rtxtmota control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rtxtmota;
+
+        /// <summary>
         /// txtsoluongtuyen control.
         /// </summary>
         /// <remarks>
@@ -85,6 +103,15 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtsoluongtuyen;
+
+        /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
 
         /// <summary>
         /// txtmucluong control.
@@ -96,6 +123,15 @@ namespace BAITAPLON_ASPNET.Views
         protected global::System.Web.UI.WebControls.TextBox txtmucluong;
 
         /// <summary>
+        /// rml control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator rml;
+
+        /// <summary>
         /// txtsodienthoai control.
         /// </summary>
         /// <remarks>
@@ -103,6 +139,15 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtsodienthoai;
+
+        /// <summary>
+        /// rsdt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator rsdt;
 
         /// <summary>
         /// txtdiachi control.

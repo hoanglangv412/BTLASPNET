@@ -37,7 +37,12 @@
             <asp:BoundField DataField="viTriCongViec" HeaderText="Vị trí công việc" />
             <asp:BoundField DataField="maNganhNghe" HeaderText="Mã ngành nghề" />
             <asp:BoundField DataField="soLuongTuyen" HeaderText="Số lượng tuyển" />
-            <asp:BoundField DataField="mucLuong" HeaderText="Mức lương" />
+         <%--   <asp:BoundField DataField="mucLuong" HeaderText="Mức lương"/>--%>
+            <asp:TemplateField>
+                <ItemTemplate>
+                    <asp:Label runat="server" ID="lblmucluong" Text='<%#  string.Format("{0:0000,0 đ}",Eval("mucLuong"))  %>' />
+                </ItemTemplate>
+            </asp:TemplateField>
             <asp:BoundField DataField="diaChi" HeaderText="Địa chỉ" />
             <asp:TemplateField HeaderText="Xóa">
                 <ItemTemplate>
