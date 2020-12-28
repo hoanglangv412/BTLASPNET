@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="AccountDetailView.aspx.cs" Inherits="BAITAPLON_ASPNET.Views.TaiKhoanDetailView" %>
+﻿<%@ Page Title="Account Detail" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="AccountDetailView.aspx.cs" Inherits="BAITAPLON_ASPNET.Views.TaiKhoanDetailView" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         table{

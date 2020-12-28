@@ -19,7 +19,7 @@
         .alertDiv{
             margin:0 auto;
             width:90%;
-            color:white;
+            color:black;
         }
     </style>
 </asp:Content>

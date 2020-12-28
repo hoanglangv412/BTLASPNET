@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="CompanyShow.aspx.cs" Inherits="BAITAPLON_ASPNET.Views.CongTyShow" %>
+﻿<%@ Page Title="Company Management" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="CompanyShow.aspx.cs" Inherits="BAITAPLON_ASPNET.Views.CongTyShow" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         table{
@@ -10,7 +10,7 @@
         .alertDiv{
             margin:0 auto;
             width:300px;
-            color:white;
+            color:black;
         }
     </style>
 </asp:Content>

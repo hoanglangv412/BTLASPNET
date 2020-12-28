@@ -473,3 +473,6 @@ C:\Users\Administrator\Desktop\hihihihi\BTLASPNET\BAITAPLON_ASPNET\obj\Debug\BAI
 C:\Users\Administrator\Desktop\hihihihi\BTLASPNET\BAITAPLON_ASPNET\bin\BouncyCastle.Crypto.dll
 C:\Users\Administrator\Desktop\hihihihi\BTLASPNET\BAITAPLON_ASPNET\bin\itextsharp.dll
 C:\Users\Administrator\Desktop\hihihihi\BTLASPNET\BAITAPLON_ASPNET\bin\itextsharp.xml
+C:\Users\HuyNguyen\Desktop\btlASP\BTLASPNET\BAITAPLON_ASPNET\bin\BouncyCastle.Crypto.dll
+C:\Users\HuyNguyen\Desktop\btlASP\BTLASPNET\BAITAPLON_ASPNET\bin\itextsharp.dll
+C:\Users\HuyNguyen\Desktop\btlASP\BTLASPNET\BAITAPLON_ASPNET\bin\itextsharp.xml

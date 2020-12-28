@@ -233,20 +233,7 @@ namespace BAITAPLON_ASPNET.Controllers
             conn.Close();
             return dt;
         }
-        public int countPost(int mantd)
-        {
-            conn.Open();
-            int sl = 0;
-            string sql = "SELECT COUNT(maBaiDang) AS soluongbaidang FROM BaiDang WHERE maNhaTuyenDung = "+mantd+"";
-            var cmd = new SqlCommand(sql,conn);
-            var rd = cmd.ExecuteReader();
-            if (rd.Read())
-            {
-                sl = (int)rd["soluongbaidang"];
-            }
-            conn.Close();
-            return sl;
-        }
+        
         public DataTable CountCV()
         {
             conn.Open();

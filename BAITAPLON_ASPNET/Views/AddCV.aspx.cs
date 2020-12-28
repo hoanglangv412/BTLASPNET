@@ -63,7 +63,7 @@ namespace BAITAPLON_ASPNET.Views
                 c.maTaiKhoan = tk.maTaiKhoan;
                 c.hoTen = txtHoten.Text;
                 c.ngaySinh = DateTime.Parse(txtNgaySinh.Text);
-                c.gioiTinh = txtGioiTinh.Text;
+                c.gioiTinh = drGIoitinh.SelectedValue;
                 c.diaChi = txtDaChi.Text;
                 c.dienThoai = txtSDT.Text;
                 c.email = txtEmail.Text;
@@ -81,12 +81,12 @@ namespace BAITAPLON_ASPNET.Views
                 c.ngayTao = DateTime.Parse(DateTime.Now.ToString("MM/dd/yyyy"));
 
                 dataCV.ThemCV(c);
-                EditCV.MessageBox(this, "Thêm Thanh Cong");
+                Response.Write("<script> alert('Tạo CV thành công') </script>");
             }
             catch (Exception)
             {
 
-                EditCV.MessageBox(this, "Co loi khi thêm");
+                Response.Write("<script> alert('Có lỗi thêm, kiểm tra lại các trường dữ liệu !') </script>");
             }
         }
     }

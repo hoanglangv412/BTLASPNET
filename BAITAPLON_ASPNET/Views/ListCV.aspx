@@ -1,6 +1,12 @@
-﻿<%@ Page Title="My list cv" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="ListCV.aspx.cs" Inherits="BAITAPLON_ASPNET.Views.ListCV" %>
+﻿<%@ Page Title="CV Management" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="ListCV.aspx.cs" Inherits="BAITAPLON_ASPNET.Views.ListCV" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
+        body{
+            background-color:#f4e6f7;
+        }
+        h1{
+            text-align:center;
+        }
         table {
             text-align:center;
             margin: 0 auto;
@@ -14,12 +20,13 @@
 
 
     <div id="searchGr">
-        <p>Tìm kiếm: <asp:TextBox ID="txtSearch" runat="server" placeholder="Nhập tiêu đề cần tìm" />
-            <asp:Button ID="btSearch" class="btn btn-primary" runat="server" Text="Tìm kiếm" OnClick="btSearch_Click" /> </p>
+        <h2 style="font-size:larger">Tìm kiếm:</h2> 
+            <asp:TextBox ID="txtSearch" runat="server" Width="300px" placeholder="Nhập tiêu đề cần tìm" />
+            <asp:Button ID="btSearch" class="btn btn-primary" runat="server" Text="Tìm kiếm" OnClick="btSearch_Click" />
     
     </div>
-
-    <asp:GridView ID="grdCV" runat="server" AutoGenerateColumns="false" class="table table-striped table-dark" width="90%">
+    <h1>MY CV</h1>
+    <asp:GridView ID="grdCV" runat="server" AutoGenerateColumns="false" class="table table-striped table-success table-hover" width="90%">
         <Columns>
             <asp:BoundField DataField="maCV" HeaderText="Mã CV" />
             <asp:BoundField DataField="tieuDe"   HeaderText="Tiêu đề" />
@@ -45,7 +52,7 @@
         </Columns>   
     </asp:GridView>
     <asp:Button class="btn btn-success" style="margin-left: 5%;" ID="btAddCV" runat="server"
-        PostBackUrl="~/Views/AddCV.aspx" Text="Thêm CV mới"/>
+        PostBackUrl="~/Views/AddCV.aspx" Text="Tạo CV mới"/>
     <asp:Button class="btn btn-success" ID="btCVPosted" runat="server"
         PostBackUrl="~/Views/ListCVPosted.aspx" Text="DS CV ứng tuyển"/>
 

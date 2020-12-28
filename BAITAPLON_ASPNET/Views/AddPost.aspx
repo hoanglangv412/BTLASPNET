@@ -13,7 +13,7 @@
         }
      .lbl{
             margin:0 auto;
-            color: white;
+            color: black;
             width: 300px;
             text-align: center;
      }

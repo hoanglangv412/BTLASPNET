@@ -1,7 +1,11 @@
 ﻿using BAITAPLON_ASPNET.Controllers;
 using BAITAPLON_ASPNET.Models;
+using iTextSharp.text;
+using iTextSharp.text.html.simpleparser;
+using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -79,5 +83,7 @@ namespace BAITAPLON_ASPNET.Views
             int mabd = Convert.ToInt32(Request.QueryString["mabd"]);
             Response.Redirect("PostDetail.aspx?maBaiDang=" + mabd + "");
         }
+
+       
     }
 }

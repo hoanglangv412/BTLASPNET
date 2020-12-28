@@ -88,4 +88,7 @@
         <asp:Button runat="server" ID="btnback" Text="Trở về" CssClass="btn btn-dark" OnClick="btnback_Click"/><asp:Button runat="server" ID="btnduyet" Text="Duyệt" OnClick="btnduyet_Click" CssClass="btn btn-success"/>
         <asp:Button runat="server" ID="btnhuy" Text="Hủy" OnClick="btnhuy_Click" CssClass="btn btn-danger"/>
     </div>
+    <br />
+
+    
 </asp:Content>

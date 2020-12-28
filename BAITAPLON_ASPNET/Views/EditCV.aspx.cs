@@ -25,7 +25,7 @@ namespace BAITAPLON_ASPNET.Views
                 txtNgaySinh.Text = c.ngaySinh.ToString("MM/dd/yyyy");
 
                 //tieptuc
-                txtGioiTinh.Text = c.gioiTinh;
+                drGIoitinh.Text = c.gioiTinh;
                 txtDaChi.Text = c.diaChi;
                 txtSDT.Text = c.dienThoai;
                 txtEmail.Text = c.email;
@@ -94,7 +94,7 @@ namespace BAITAPLON_ASPNET.Views
                 c.tieuDe = txtTieuDe.Text;
                 c.hoTen = txtHoten.Text;
                 c.ngaySinh = DateTime.Parse(txtNgaySinh.Text);
-                c.gioiTinh = txtGioiTinh.Text;
+                c.gioiTinh = drGIoitinh.SelectedValue;
                 c.diaChi = txtDaChi.Text;
                 c.dienThoai = txtSDT.Text;
                 c.email = txtEmail.Text;

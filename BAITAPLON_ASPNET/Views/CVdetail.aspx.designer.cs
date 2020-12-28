@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BAITAPLON_ASPNET.Views
-{
-
-
-    public partial class WebForm1
-    {
-
+namespace BAITAPLON_ASPNET.Views {
+    
+    
+    public partial class WebForm1 {
+        
         /// <summary>
         /// tblcv control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Table tblcv;
-
+        
         /// <summary>
         /// imganhthe control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imganhthe;
-
+        
         /// <summary>
         /// lblhoten control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblhoten;
-
+        
         /// <summary>
         /// lblgioiTinh control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblgioiTinh;
-
+        
         /// <summary>
         /// lblngaysinh control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblngaysinh;
-
+        
         /// <summary>
         /// lbldiaChi control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbldiaChi;
-
+        
         /// <summary>
         /// soDienthoai control.
         /// </summary>
@@ -76,7 +74,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label soDienthoai;
-
+        
         /// <summary>
         /// email control.
         /// </summary>
@@ -85,7 +83,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label email;
-
+        
         /// <summary>
         /// lbltieude control.
         /// </summary>
@@ -94,7 +92,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbltieude;
-
+        
         /// <summary>
         /// lblhocvan control.
         /// </summary>
@@ -103,7 +101,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblhocvan;
-
+        
         /// <summary>
         /// lblkinhnghiem control.
         /// </summary>
@@ -112,7 +110,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblkinhnghiem;
-
+        
         /// <summary>
         /// lblkinang control.
         /// </summary>
@@ -121,7 +119,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblkinang;
-
+        
         /// <summary>
         /// lblthongtin control.
         /// </summary>
@@ -130,7 +128,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblthongtin;
-
+        
         /// <summary>
         /// btnback control.
         /// </summary>
@@ -139,7 +137,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnback;
-
+        
         /// <summary>
         /// btnduyet control.
         /// </summary>
@@ -148,7 +146,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnduyet;
-
+        
         /// <summary>
         /// btnhuy control.
         /// </summary>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="UsersShow.aspx.cs" Inherits="BAITAPLON_ASPNET.Views.UsersShow" %>
+﻿<%@ Page Title="User Management" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="UsersShow.aspx.cs" Inherits="BAITAPLON_ASPNET.Views.UsersShow" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .font-weight-bolder{

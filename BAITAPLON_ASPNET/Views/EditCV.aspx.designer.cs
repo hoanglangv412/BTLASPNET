@@ -13,6 +13,33 @@ namespace BAITAPLON_ASPNET.Views {
     public partial class EditCV {
         
         /// <summary>
+        /// lbAnhThe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbAnhThe;
+        
+        /// <summary>
+        /// imgCV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgCV;
+        
+        /// <summary>
+        /// browserAvatar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload browserAvatar;
+        
+        /// <summary>
         /// txtMaCV control.
         /// </summary>
         /// <remarks>
@@ -67,13 +94,13 @@ namespace BAITAPLON_ASPNET.Views {
         protected global::System.Web.UI.WebControls.Calendar clDate;
         
         /// <summary>
-        /// txtGioiTinh control.
+        /// drGIoitinh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGioiTinh;
+        protected global::System.Web.UI.WebControls.DropDownList drGIoitinh;
         
         /// <summary>
         /// txtDaChi control.
@@ -148,33 +175,6 @@ namespace BAITAPLON_ASPNET.Views {
         protected global::System.Web.UI.WebControls.TextBox txtNgayTao;
         
         /// <summary>
-        /// lbAnhThe control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbAnhThe;
-        
-        /// <summary>
-        /// imgCV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgCV;
-        
-        /// <summary>
-        /// browserAvatar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload browserAvatar;
-        
-        /// <summary>
         /// btEdit control.
         /// </summary>
         /// <remarks>
@@ -182,5 +182,14 @@ namespace BAITAPLON_ASPNET.Views {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btEdit;
+        
+        /// <summary>
+        /// btBack control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btBack;
     }
 }
