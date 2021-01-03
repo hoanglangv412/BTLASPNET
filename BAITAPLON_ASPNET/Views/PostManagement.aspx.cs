@@ -14,6 +14,7 @@ namespace BAITAPLON_ASPNET.Views
     {
         BaiDangController bdc = new BaiDangController();
         UngTuyenController utc = new UngTuyenController();
+        string alert = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -31,10 +32,17 @@ namespace BAITAPLON_ASPNET.Views
 
         protected void btndelete_Click(object sender, CommandEventArgs e)
         {
-            if (e.CommandName == "delete")
+            if (e.CommandName == "xoa")
             {
-                bdc.delBaidang(Convert.ToInt32(e.CommandArgument));
-                hienthi();
+                if (bdc.delBaidang(Convert.ToInt32(e.CommandArgument)))
+                {
+                    hienthi();
+                }
+                else
+                {
+                    alert = "Vẫn còn bài đăng sử dụng ngành nghề này.";
+                    Response.Write("<script>alert('" + alert + "')</script>");
+                }
             }
         }
         protected void btnedit_Click(object sender, CommandEventArgs e)

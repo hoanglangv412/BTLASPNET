@@ -98,6 +98,7 @@
     <Content Include="Views\PostDetail.aspx" />
     <Content Include="Views\PostManagement.aspx" />
     <Content Include="Views\AccountDetailView.aspx" />
+    <Content Include="Views\TypeManagement.aspx" />
     <Content Include="Views\UsersShow.aspx" />
     <Content Include="Views\CVdetail.aspx" />
     <Content Include="Web.config" />
@@ -201,6 +202,13 @@
     </Compile>
     <Compile Include="Views\AccountDetailView.aspx.designer.cs">
       <DependentUpon>AccountDetailView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TypeManagement.aspx.cs">
+      <DependentUpon>TypeManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TypeManagement.aspx.designer.cs">
+      <DependentUpon>TypeManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\UsersShow.aspx.cs">
       <DependentUpon>UsersShow.aspx</DependentUpon>

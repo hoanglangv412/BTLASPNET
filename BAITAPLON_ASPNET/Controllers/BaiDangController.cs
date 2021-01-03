@@ -116,21 +116,24 @@ namespace BAITAPLON_ASPNET.Controllers
                 return "Xảy ra lỗi";
             }
         }
-        public string delBaidang(int maBaiDang)
+        public bool delBaidang(int maBaiDang)
         {
+            bool flag = false;
             try
             {
                 conn.Open();
-                string sql = "DELETE FROM BaiDang WHERE maBaiDang = "+maBaiDang+"";
+                string sql = "DELETE FROM BaiDang WHERE maBaiDang = " + maBaiDang + "";
                 var cmd = new SqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
-                conn.Close();
-                return "Xóa thành công";
+                flag = true;
             }
             catch (Exception)
             {
-                return "Xảy ra lỗi";
+
+                flag = false;
             }
+            conn.Close();
+            return flag;
         }
         public string editBaidang(BaiDang bd)
         {

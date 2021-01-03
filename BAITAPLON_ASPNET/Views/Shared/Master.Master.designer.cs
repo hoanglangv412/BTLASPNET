@@ -87,6 +87,15 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl linguoidung;
 
         /// <summary>
+        /// linganhnghe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl linganhnghe;
+
+        /// <summary>
         /// btnlogin control.
         /// </summary>
         /// <remarks>

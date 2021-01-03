@@ -11,61 +11,43 @@ namespace BAITAPLON_ASPNET.Views
 {
 
 
-    public partial class PostManagement
+    public partial class TypeManagement
     {
 
         /// <summary>
-        /// txtsearch control.
+        /// grdtype control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsearch;
+        protected global::System.Web.UI.WebControls.GridView grdtype;
 
         /// <summary>
-        /// btnsearch control.
+        /// btnthem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnsearch;
+        protected global::System.Web.UI.WebControls.Button btnthem;
 
         /// <summary>
-        /// lblalert control.
+        /// txttennn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblalert;
+        protected global::System.Web.UI.WebControls.TextBox txttennn;
 
         /// <summary>
-        /// grdpost control.
+        /// btnxacnhan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdpost;
-
-        /// <summary>
-        /// lblalert1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblalert1;
-
-        /// <summary>
-        /// btadd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btadd;
+        protected global::System.Web.UI.WebControls.Button btnxacnhan;
     }
 }

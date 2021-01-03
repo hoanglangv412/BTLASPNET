@@ -37,16 +37,16 @@
             <asp:BoundField DataField="viTriCongViec" HeaderText="Vị trí công việc" />
             <asp:BoundField DataField="maNganhNghe" HeaderText="Mã ngành nghề" />
             <asp:BoundField DataField="soLuongTuyen" HeaderText="Số lượng tuyển" />
-         <%--   <asp:BoundField DataField="mucLuong" HeaderText="Mức lương"/>--%>
-            <asp:TemplateField>
+<%--            <asp:BoundField DataField="mucLuong" HeaderText="Mức lương"/>--%>
+            <asp:TemplateField HeaderText="Mức lương">
                 <ItemTemplate>
-                    <asp:Label runat="server" ID="lblmucluong" Text='<%#  string.Format("{0:0000,0 đ}",Eval("mucLuong"))  %>' />
+                    <asp:Label runat="server" ID="lblmucluong" Text='<%#  string.Format("{0:0000,0 đ}",Eval("mucLuong"))  %>'/>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:BoundField DataField="diaChi" HeaderText="Địa chỉ" />
             <asp:TemplateField HeaderText="Xóa">
                 <ItemTemplate>
-                    <asp:Button runat="server" Text="Xóa" ID="btndelete" CommandArgument='<%#Bind("maBaiDang")%>' CommandName="delete" OnCommand="btndelete_Click" CssClass="btn btn-danger"/>
+                    <asp:Button runat="server" Text="Xóa" ID="btndelete" CommandArgument='<%#Bind("maBaiDang")%>' CommandName="xoa" OnCommand="btndelete_Click" OnClientClick="return confirm('Bạn chắc chắn muốn xóa?')" CssClass="btn btn-danger"/>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Sửa">
@@ -62,6 +62,7 @@
         </Columns>
     </asp:GridView>
     <div class="alertDiv">
+            <asp:Label runat="server" ID="lblalert1" />
             <asp:Button runat="server" Text="Thêm bài đăng" ID="btadd" PostBackUrl="AddPost.aspx" CssClass="btn btn-success"/>
     </div>
 </asp:Content>
