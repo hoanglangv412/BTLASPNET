@@ -20,7 +20,7 @@ namespace BAITAPLON_ASPNET.Controllers
         {
             conn.Open();
             string path = "SELECT * FROM NganhNghe";
-            var da = new SqlDataAdapter(path,conn);
+            var da = new SqlDataAdapter(path, conn);
             var dt = new DataTable();
             da.Fill(dt);
             conn.Close();
@@ -43,52 +43,59 @@ namespace BAITAPLON_ASPNET.Controllers
                 return "Thất bại";
             }
         }
-        public string editNganhNghe(NganhNghe nn)
+        public NganhNghe get1NN(int mnn)
         {
-            try
+            conn.Open();
+            string path = "SELECT * FROM NganhNghe WHERE maNganhNghe = " + mnn + "";
+            SqlCommand cmd = new SqlCommand(path, conn);
+            NganhNghe ngN = null;
+            SqlDataReader rd = cmd.ExecuteReader();
+            if (rd.Read())
             {
-                conn.Open();
-                string path = "UPDATE NganhNghe SET tenNganhNghe = "+nn.TenNganhNghe+" WHERE maNganhNghe = "+nn.maNganhNghe+"";
-                var cmd = new SqlCommand(path, conn);
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                return "Thành công";
+                ngN = new NganhNghe();
+
+               ngN.maNganhNghe = (int)rd["maNganhNghe"];
+               ngN.TenNganhNghe = (string)rd["TenNganhNghe"];
+
             }
-            catch (Exception)
-            {
-                return "Thất bại";
-            }
+            conn.Close();
+            return ngN;
+
         }
         public bool checkForeign(int nn)
         {
             conn.Open();
+
             bool flag = false;
-            string path = "SELECT * FROM BaiDang WHERE maNganhNghe = @nn";
-            var cmd = new SqlCommand(path,conn);
-            cmd.Parameters.AddWithValue("nn",nn);
+            string path = "SELECT * FROM BaiDang WHERE maNganhNghe = " + nn + "";
+            var cmd = new SqlCommand(path, conn);
             var rd = cmd.ExecuteReader();
             if (rd.Read())
             {
                 flag = true;
             }
+            conn.Close();
             return flag;
+
         }
-        public string delNganhNghe()
+        public void delNganhNghe(int maNN)
         {
-            try
-            {
-                conn.Open();
-                string path = "DELETE from NganhNghe where maNganhNghe = 8";
-                var cmd = new SqlCommand(path,conn);
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                return "Thành công";
-            }
-            catch (Exception)
-            {
-                return "Thất bại";
-            }
+            conn.Open();
+            string path = "DELETE from NganhNghe where maNganhNghe = " + maNN + "";
+            var cmd = new SqlCommand(path, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
+        public void EditNganhNghe(NganhNghe NN)
+        {
+            conn.Open();
+            string sql = "update NganhNghe set TenNganhNghe= @tnn where maNganhNghe= @mann";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("mnn", NN.maNganhNghe);
+            cmd.Parameters.AddWithValue("tnn", NN.TenNganhNghe);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

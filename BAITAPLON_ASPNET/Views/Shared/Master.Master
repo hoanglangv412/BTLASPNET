@@ -102,7 +102,6 @@
                         <p class="text-xl-left">Xác nhận: </p><asp:TextBox ID="txtxnmatkhau" runat="server" TextMode="Password"/><br />
                         <p class="text-xl-left">Ảnh: </p><asp:TextBox ID="txtanhdk" runat="server"/>
                         <p class="text-xl-left">Bạn là: </p>
-                          <asp:RadioButton runat="server" ID="rbadmin" Text="Admin" GroupName="rdbtn"/><br />
                           <asp:RadioButton runat="server" ID="rbnd" Text="Người dùng" GroupName="rdbtn"/><br />
                           <asp:RadioButton runat="server" ID="rbntd" Text="Nhà tuyển dụng" GroupName="rdbtn" OnClientClick="show2();"/><br />
                           <div runat="server" style="margin-left:10px;" class="nhatuyendungdiv" id="test">

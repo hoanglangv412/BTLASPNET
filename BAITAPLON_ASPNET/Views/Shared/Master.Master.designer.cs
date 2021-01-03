@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BTL_ASPNET_WEBGTVL.Views.Shared
-{
-
-
-    public partial class Master
-    {
-
+namespace BTL_ASPNET_WEBGTVL.Views.Shared {
+    
+    
+    public partial class Master {
+        
         /// <summary>
         /// head control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
-
+        
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
+        
         /// <summary>
         /// Image1 control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image1;
-
+        
         /// <summary>
         /// licv control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl licv;
-
+        
         /// <summary>
         /// litindang control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl litindang;
-
+        
         /// <summary>
         /// litaikhoan control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl litaikhoan;
-
+        
         /// <summary>
         /// licongty control.
         /// </summary>
@@ -76,7 +74,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl licongty;
-
+        
         /// <summary>
         /// linguoidung control.
         /// </summary>
@@ -85,7 +83,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl linguoidung;
-
+        
         /// <summary>
         /// linganhnghe control.
         /// </summary>
@@ -94,7 +92,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl linganhnghe;
-
+        
         /// <summary>
         /// btnlogin control.
         /// </summary>
@@ -103,7 +101,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnlogin;
-
+        
         /// <summary>
         /// btnsignin control.
         /// </summary>
@@ -112,7 +110,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnsignin;
-
+        
         /// <summary>
         /// btnlogout control.
         /// </summary>
@@ -121,7 +119,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnlogout;
-
+        
         /// <summary>
         /// txttaikhoan control.
         /// </summary>
@@ -130,7 +128,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txttaikhoan;
-
+        
         /// <summary>
         /// txtmatkhau control.
         /// </summary>
@@ -139,7 +137,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtmatkhau;
-
+        
         /// <summary>
         /// btnmodallogin control.
         /// </summary>
@@ -148,7 +146,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnmodallogin;
-
+        
         /// <summary>
         /// txttaikhoandk control.
         /// </summary>
@@ -157,7 +155,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txttaikhoandk;
-
+        
         /// <summary>
         /// txtmatkhaudk control.
         /// </summary>
@@ -166,7 +164,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtmatkhaudk;
-
+        
         /// <summary>
         /// txtxnmatkhau control.
         /// </summary>
@@ -175,7 +173,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtxnmatkhau;
-
+        
         /// <summary>
         /// txtanhdk control.
         /// </summary>
@@ -184,16 +182,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtanhdk;
-
-        /// <summary>
-        /// rbadmin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbadmin;
-
+        
         /// <summary>
         /// rbnd control.
         /// </summary>
@@ -202,7 +191,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton rbnd;
-
+        
         /// <summary>
         /// rbntd control.
         /// </summary>
@@ -211,7 +200,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton rbntd;
-
+        
         /// <summary>
         /// test control.
         /// </summary>
@@ -220,7 +209,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl test;
-
+        
         /// <summary>
         /// txttennhatuyendung control.
         /// </summary>
@@ -229,7 +218,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txttennhatuyendung;
-
+        
         /// <summary>
         /// txtgioithieu control.
         /// </summary>
@@ -238,7 +227,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtgioithieu;
-
+        
         /// <summary>
         /// btnmodalsignin control.
         /// </summary>
@@ -247,7 +236,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnmodalsignin;
-
+        
         /// <summary>
         /// ContentPlaceHolder1 control.
         /// </summary>

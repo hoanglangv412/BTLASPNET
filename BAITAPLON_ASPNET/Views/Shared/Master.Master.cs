@@ -17,6 +17,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
         {
             if (Session["tk"] == null)
             {
+                linganhnghe.Visible = false;
                 btnlogin.Visible = true;
                 btnsignin.Visible = true;
                 btnlogout.Visible = false;
@@ -34,6 +35,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
                 TaiKhoan tk = (TaiKhoan)Session["tk"];
                 if (tk.loaiTaiKhoan == 0)
                 {
+                    linganhnghe.Visible = true;
                     litaikhoan.Visible = true;
                     linguoidung.Visible = true;
                     litindang.Visible = false;
@@ -42,6 +44,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
                 }
                 if (tk.loaiTaiKhoan == 1)
                 {
+                    linganhnghe.Visible = false;
                     litaikhoan.Visible = true;
                     litindang.Visible = true;
                     linguoidung.Visible = false;
@@ -50,6 +53,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
                 }
                 if (tk.loaiTaiKhoan == 2)
                 {
+                    linganhnghe.Visible = false;
                     litaikhoan.Visible = true;
                     licv.Visible = true;
                     litindang.Visible = false;
@@ -115,10 +119,7 @@ namespace BTL_ASPNET_WEBGTVL.Views.Shared
                 alert = "Bạn chưa nhập tài khoản hoặc mật khẩu.";
             }
             else {
-                if (rbadmin.Checked)
-                {
-                    loaitaikhoan = 0;
-                }
+               
                 if (rbntd.Checked)
                 {
                     loaitaikhoan = 1;

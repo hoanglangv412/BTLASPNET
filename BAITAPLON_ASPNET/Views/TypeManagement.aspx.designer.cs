@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BAITAPLON_ASPNET.Views
-{
-
-
-    public partial class TypeManagement
-    {
-
+namespace BAITAPLON_ASPNET.Views {
+    
+    
+    public partial class TypeManagement {
+        
         /// <summary>
         /// grdtype control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grdtype;
-
+        
         /// <summary>
         /// btnthem control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnthem;
-
+        
         /// <summary>
         /// txttennn control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace BAITAPLON_ASPNET.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txttennn;
-
+        
         /// <summary>
         /// btnxacnhan control.
         /// </summary>

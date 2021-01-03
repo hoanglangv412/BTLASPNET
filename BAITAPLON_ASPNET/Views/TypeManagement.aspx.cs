@@ -1,4 +1,5 @@
 ﻿using BAITAPLON_ASPNET.Controllers;
+using BAITAPLON_ASPNET.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +18,7 @@ namespace BAITAPLON_ASPNET.Views
             txttennn.Visible = false;
             btnxacnhan.Visible = false;
             if (!IsPostBack)
-            {
                 hienthi();
-            }
         }
 
         private void hienthi()
@@ -37,9 +36,14 @@ namespace BAITAPLON_ASPNET.Views
         {
             if(e.CommandName == "xoa")
             {
-                if (!nnc.checkForeign(Convert.ToInt32(e.CommandArgument))){
-                    alert = nnc.delNganhNghe();
-                    //hienthi();
+                int mnn = Convert.ToInt32(e.CommandArgument);
+
+
+                if ( !nnc.checkForeign(mnn) )
+                {
+                    nnc.delNganhNghe(mnn);
+                    alert += "Thành công!";
+                    hienthi();
                 }
                 else
                 {
@@ -48,6 +52,7 @@ namespace BAITAPLON_ASPNET.Views
             }
             Response.Write("<script>alert('" + alert + "')</script>");
         }
+
         protected void btnxacnhan_Click(object sender, EventArgs e)
         {
             if(txttennn.Text != "")
@@ -61,5 +66,7 @@ namespace BAITAPLON_ASPNET.Views
             }
             //Response.Write("<script>alert('" + alert + "')</script>");
         }
+
+        
     }
 }

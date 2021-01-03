@@ -15,6 +15,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <h2 style="text-align:center">BÀI ĐĂNG</h2>
         <asp:DataList ID="ddlcongty" runat="server" DataKeyField="maNhaTuyenDung" RepeatColumns="2" CssClass="table table-dark table-sm" Width="90%">
             <ItemTemplate>
                   <asp:Table ID="tblcongty" runat="server" Width="100%" CssClass="tableBaiDang">
