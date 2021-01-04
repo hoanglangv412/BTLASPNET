@@ -20,7 +20,7 @@
         .child {
             position: absolute;
             left: 100%;
-            top: 170px;
+            top: 115px;
         }
 
         .img {
